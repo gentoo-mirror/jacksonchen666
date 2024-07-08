@@ -1,5 +1,6 @@
-BDEPEND=doc? ( dev-python/mkdocs dev-python/mkdocs-material dev-python/mkdocs-minify-plugin ) server? ( net-libs/nodejs[npm] ) >=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+BDEPEND=doc? ( dev-python/mkdocs dev-python/mkdocs-material dev-python/mkdocs-minify-plugin ) server? ( net-libs/nodejs[npm] ) acct-group/ntfy acct-user/ntfy >=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=acct-group/ntfy acct-user/ntfy
 DESCRIPTION=Simple pub-sub notification service
 EAPI=8
 HOMEPAGE=https://ntfy.sh
@@ -7,8 +8,9 @@ INHERIT=go-module systemd
 IUSE=+server doc
 KEYWORDS=~arm64
 LICENSE=|| ( Apache-2.0 GPL-2 )
+RDEPEND=acct-group/ntfy acct-user/ntfy
 RESTRICT=test network-sandbox strip
 SLOT=0
 SRC_URI=https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.11.0.tar.gz -> ntfy-2.11.0.tar.gz https://files.jacksonchen666.com/gentoo/ntfy-2.11.0-vendor.tar.xz
 _eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	dbefaac6fd7019213514bccd65949d9a	go-module	83fd3ed1657cfc316c93d6a37018290d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	systemd	c8b03e8df84486aa991d4396686e8942	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=85c14139d84596786a085fbf35944725
+_md5_=b8d08dca89852b182ddb485172571119

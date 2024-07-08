@@ -15,9 +15,6 @@ SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
 # and after `npm i` in ./web/:
 # tar --create --auto-compress --file ntfy-2.11.0-vendor.tar.xz ntfy-2.11.0/vendor ntfy-2.11.0/web/node_modules
 
-# TODO: include other files as well
-# https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L82-L100
-
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
@@ -25,8 +22,10 @@ LICENSE="|| ( Apache-2.0 GPL-2 )"
 SLOT="0"
 KEYWORDS="~arm64"
 
-# XXX: groups?
-#DEPEND=""
+DEPEND="
+	acct-group/ntfy
+	acct-user/ntfy
+"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	doc? (
@@ -37,7 +36,11 @@ BDEPEND="
 	server? (
 		net-libs/nodejs[npm]
 	)
+	${DEPEND}
 "
+PATCHES=(
+	"${FILESDIR}/0001-suggest-prepared-paths.patch"
+)
 # XXX: default optional server?
 IUSE="+server doc"
 # TODO: make test succeed
@@ -54,18 +57,18 @@ src_configure() {
 		CGO_ENABLED=0
 	fi
 	if use server && ! use doc; then
-		ewarn "server USE flag is enabled but doc USE flag isn't,"
-		ewarn "documentation linked on the web UI will not be available!"
+		ewarn "server USE flag is enabled but doc USE flag isn't, Documentation linked on"
+		ewarn "the web UI will not be available!"
 	fi
 }
 
 src_prepare() {
+	default
+
 	if use server; then
 		# NOT done in vendored tar
 		emake -j1 web-deps
 	fi
-
-	default
 }
 
 src_compile() {
@@ -76,7 +79,7 @@ src_compile() {
 		emake -j1 web-build
 	fi
 	if use doc; then
-		mkdocs build
+		mkdocs build || die
 	fi
 
 	# ldflags idea taken from dev-go/golangci-lint::gentoo
@@ -90,19 +93,48 @@ src_install() {
 	dobin ntfy
 
 	# https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L82-L100
-	insinto /etc/${PN}/
-	cp client/client.yml client/client.yaml.example || die
-	doins client/client.yaml.example
-	if use server; then
-		cp server/server.yml server/server.yaml.example || die
-		doins server/server.yaml.example
-	fi
 
+	# random png
+	insinto /usr/share/${PF}/
+	cp web/public/static/images/ntfy.png web/public/static/images/logo.png || die
+	doins web/public/static/images/logo.png
+	chown -R ntfy:ntfy "${D}/usr/share/${PF}/" || die
+
+	# configuration
+	insinto /etc/${PN}/
+	cp client/client.yml client/client.yml.example || die
+	doins client/client.yml.example
+	if use server; then
+		cp server/server.yml server/server.yml.example || die
+		doins server/server.yml.example
+	fi
+	chown -R ntfy:ntfy "${D}/etc/${PN}/" || die
+	chmod -R 750 "${D}/etc/${PN}/" || die
+
+	# referenced folders in example config
+	dodir /var/lib/${PN}/
+	keepdir /var/lib/${PN}/
+	chown -R ntfy:ntfy "${D}/var/lib/${PN}/" || die
+	chmod -R 750 "${D}/var/lib/${PN}/" || die
+
+	# TODO: fix QA notice
+	dodir  var/cache/${PN}/
+	keepdir /var/cache/${PN}/
+	chown -R ntfy:ntfy "${D}/var/cache/${PN}/" || die
+	chmod -R 750 "${D}/var/cache/${PN}/" || die
+
+	dodir /var/cache/${PN}/attachments/
+	keepdir /var/cache/${PN}/attachments/
+	chown -R ntfy:ntfy "${D}/var/cache/${PN}/attachments/" || die
+	chmod -R 750 "${D}/var/cache/${PN}/attachments/" || die
+
+	# init files
 	systemd_dounit client/ntfy-client.service
 	if use server; then
 		systemd_dounit server/ntfy.service
 	fi
 	# TODO: openrc files (local file?)
 
+	# docs
 	HTML_DOCS="server/docs/" einstalldocs
 }
