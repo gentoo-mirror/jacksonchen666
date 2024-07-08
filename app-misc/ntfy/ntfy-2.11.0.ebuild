@@ -28,7 +28,8 @@ RDEPEND="${DEPEND}"
 # TODO
 BDEPEND="dev-python/mkdocs
 	dev-python/mkdocs-material
-	dev-python/mkdocs-minify-plugin"
+	dev-python/mkdocs-minify-plugin
+	net-libs/nodejs[npm]"
 
 src_configure() {
 	# TODO: fix -X
