@@ -4,6 +4,8 @@
 EAPI=8
 
 inherit go-module
+# update on every bump
+GIT_COMMIT=d11b100
 
 DESCRIPTION="Some words here"
 HOMEPAGE="https://github.com/binwiederhier/ntfy"
@@ -34,9 +36,6 @@ BDEPEND="
 "
 
 src_configure() {
-	# TODO: fix -X
-	# https://wiki.gentoo.org/wiki/Go_ebuild_tricks#go_tags
-	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w -ldflags=-X=main.version={{.Version}} -ldflags=-X=main.commit={{.Commit}} -ldflags=-X=main.date={{.Date}}"
 	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
 }
 
@@ -48,10 +47,13 @@ src_compile() {
 	# XXX: USE flag-ify (not possible for test probably)
 	# TODO: deal with network sandbox
 	emake -j1 web
-
 	mkdocs build
 
-	CGO_ENABLED=1 ego build
+	# ldflags idea taken from dev-go/golangci-lint::gentoo
+	CGO_ENABLED=1 ego build "${myargs[@]}" -ldflags "
+		-X main.version=${PV}
+		-X main.commit=${GIT_COMMIT}
+		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 
 # TODO: tests that work with web disabled?
