@@ -26,7 +26,9 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 # TODO
-BDEPEND=""
+BDEPEND="dev-python/mkdocs
+	dev-python/mkdocs-material
+	dev-python/mkdocs-minify-plugin"
 
 src_configure() {
 	# TODO: fix -X
@@ -43,7 +45,8 @@ src_compile() {
 	# XXX: USE flag-ify (not possible for test probably)
 	# TODO: deal with network sandbox
 	emake -j1 web
-	emake -j1 docs
+
+	mkdocs build
 
 	CGO_ENABLED=1 ego build
 }
