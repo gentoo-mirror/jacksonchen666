@@ -29,6 +29,8 @@ BDEPEND="
 	dev-python/mkdocs-minify-plugin
 	net-libs/nodejs[npm]
 "
+# TODO
+FEATURES="-network-sandbox -test"
 
 src_configure() {
 	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
@@ -49,8 +51,6 @@ src_compile() {
 		-X main.commit=${GIT_COMMIT}
 		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
-
-# TODO: test the tests
 
 src_install() {
 	dobin ntfy
