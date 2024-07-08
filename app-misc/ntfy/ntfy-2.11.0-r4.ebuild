@@ -57,7 +57,7 @@ src_configure() {
 		CGO_ENABLED=0
 	fi
 	if use server && ! use doc; then
-		ewarn "server USE flag is enabled but doc USE flag isn't, Documentation linked on"
+		ewarn "server USE flag is enabled but doc USE flag isn't, documentation linked on"
 		ewarn "the web UI will not be available!"
 	fi
 }
