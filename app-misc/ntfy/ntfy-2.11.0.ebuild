@@ -31,42 +31,7 @@ src_compile() {
 
 	# TODO: check goreleaser and do something like that
 	# XXX: explore other targets
-	# upstream .goreleaser.yml file:
-#  -
-#    id: ntfy_linux_amd64
-#    env:
-#      - CGO_ENABLED=1 # required for go-sqlite3
-#    tags: [sqlite_omit_load_extension,osusergo,netgo]
-#    ldflags:
-#      - "-linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
-#    goos: [linux]
-#    goarch: [amd64]
-#  -
-#    id: ntfy_linux_armv6
-#    env:
-#      - CGO_ENABLED=1 # required for go-sqlite3
-#      - CC=arm-linux-gnueabi-gcc # apt install gcc-arm-linux-gnueabi
-#    tags: [sqlite_omit_load_extension,osusergo,netgo]
-#    ldflags:
-#      - "-linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
-#  -
-#    id: ntfy_linux_armv7
-#    binary: ntfy
-#    env:
-#      - CGO_ENABLED=1 # required for go-sqlite3
-#      - CC=arm-linux-gnueabi-gcc # apt install gcc-arm-linux-gnueabi
-#    tags: [sqlite_omit_load_extension,osusergo,netgo]
-#    ldflags:
-#      - "-linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
-#  -
-#    id: ntfy_linux_arm64
-#    binary: ntfy
-#    env:
-#      - CGO_ENABLED=1 # required for go-sqlite3
-#      - CC=aarch64-linux-gnu-gcc # apt install gcc-aarch64-linux-gnu
-#    tags: [sqlite_omit_load_extension,osusergo,netgo]
-#    ldflags:
-#      - "-linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
+	# go check the upstream .goreleaser.yml file:
 	#emake cli-linux-server
 
 	# https://docs.ntfy.sh/develop/
