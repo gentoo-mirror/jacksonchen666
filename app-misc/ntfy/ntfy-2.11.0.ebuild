@@ -24,12 +24,19 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+# TODO
 BDEPEND=""
+
+src_configure() {
+	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
+	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo"
+	# XXX: check goreleaser and do something like that
+	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
+}
 
 src_compile() {
     #ego build
 
-	# TODO: check goreleaser and do something like that
 	# XXX: explore other targets
 	# go check the upstream .goreleaser.yml file:
 	#emake cli-linux-server
@@ -37,13 +44,28 @@ src_compile() {
 	# https://docs.ntfy.sh/develop/
 	emake cli-deps-static-sites
 
+	# XXX: USE flag-ify (not possible for test probably)
+	# same as emake web, however this must be done in order
+	emake web-deps
+	emake web-build
+
+	#CGO_ENABLED=1 ego build -linkmode=external -extldflags=-static -s -w -X main.version="{{.Version}}" -X "main.commit={{.Commit}}" -X "main.date={{.Date}}"
 	CGO_ENABLED=1 ego build
 }
+
+# TODO: tests that work with web disabled?
+# cause default works but then uh... it fails with web disabled?
+# TODO: test the tests
+#src_test() {
+#	emake test
+#}
 
 src_install() {
 	#die "not implemented"
 
     dobin ntfy
+	# TODO: service files
+	# TODO: openrc files? (local file?)
 
 	#emake DESTDIR="${D}" install-linux-arm64
 }
