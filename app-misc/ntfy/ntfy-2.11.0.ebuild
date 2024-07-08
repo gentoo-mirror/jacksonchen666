@@ -17,10 +17,9 @@ SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~arm64"
-IUSE=""
 
 # XXX: groups?
-DEPEND=""
+#DEPEND=""
 RDEPEND="${DEPEND}"
 # TODO
 BDEPEND="
