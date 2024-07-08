@@ -14,7 +14,7 @@ SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 
 # TODO: 9999
 # TODO: check with third party deps
-LICENSE="|| ( Apache-2.0 GPL-2 )"
+LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~arm64"
 IUSE=""
