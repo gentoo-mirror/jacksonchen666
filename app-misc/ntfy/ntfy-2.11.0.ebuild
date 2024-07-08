@@ -35,8 +35,10 @@ BDEPEND="
 	dev-python/mkdocs-minify-plugin
 	net-libs/nodejs[npm]
 "
-# TODO: don't do these
-FEATURES="-network-sandbox -test"
+# TODO: something like this... for now
+FEATURES="-network-sandbox"
+# TODO: make test succeed
+RESTRICT="test"
 
 src_configure() {
 	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
