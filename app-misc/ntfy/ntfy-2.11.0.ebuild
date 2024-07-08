@@ -6,7 +6,7 @@ inherit go-module
 # update on every bump
 GIT_COMMIT=d11b100
 
-DESCRIPTION="HTTP-based pub-sub notification service"
+DESCRIPTION="Simple pub-sub notification service"
 HOMEPAGE="https://github.com/binwiederhier/ntfy"
 SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 # TODO: put the vendor actually somewhere instead of a temporary place
