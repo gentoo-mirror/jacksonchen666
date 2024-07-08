@@ -1,30 +1,25 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 2024 JacksonChen666
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-
 inherit go-module
 # update on every bump
 GIT_COMMIT=d11b100
 
-DESCRIPTION="Some words here"
+DESCRIPTION="HTTP-based pub-sub notification service"
 HOMEPAGE="https://github.com/binwiederhier/ntfy"
-#SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.11.0.tar.gz"
-# TODO: put the vendor actually somewhere instead of a temporary place
-# TODO: other versions?
 SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+# TODO: put the vendor actually somewhere instead of a temporary place
 SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
-# XXX: figure out available architectures and how to build tem
 
 # TODO: 9999
 # TODO: check with third party deps
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~arm64"
 IUSE=""
 
-# TODO: USE flags to control building of docs and web app
-
+# XXX: groups?
 DEPEND=""
 RDEPEND="${DEPEND}"
 # TODO
@@ -44,7 +39,6 @@ src_compile() {
 
 	# pre-requisites, embedded in binary
 	# must be done in order, can't be parallelized anyways
-	# XXX: USE flag-ify (not possible for test probably)
 	# TODO: deal with network sandbox
 	emake -j1 web
 	mkdocs build
@@ -56,19 +50,10 @@ src_compile() {
 		-X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 
-# TODO: tests that work with web disabled?
-# cause default works but then uh... it fails with web disabled?
 # TODO: test the tests
-#src_test() {
-#	emake test
-#}
 
 src_install() {
-	#die "not implemented"
-
     dobin ntfy
 	# TODO: service files
 	# TODO: openrc files? (local file?)
-
-	#emake DESTDIR="${D}" install-linux-arm64
 }
