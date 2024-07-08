@@ -53,7 +53,7 @@ src_compile() {
 # TODO: test the tests
 
 src_install() {
-    dobin ntfy
+	dobin ntfy
 	# TODO: service files
 	# TODO: openrc files? (local file?)
 }
