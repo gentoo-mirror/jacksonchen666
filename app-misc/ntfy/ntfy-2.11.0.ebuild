@@ -10,6 +10,7 @@ DESCRIPTION="HTTP-based pub-sub notification service"
 HOMEPAGE="https://github.com/binwiederhier/ntfy"
 SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 # TODO: put the vendor actually somewhere instead of a temporary place
+# https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Vendor_tarball
 SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 
 # TODO: 9999
