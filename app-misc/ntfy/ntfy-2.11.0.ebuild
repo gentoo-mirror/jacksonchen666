@@ -45,9 +45,8 @@ src_compile() {
 	emake cli-deps-static-sites
 
 	# XXX: USE flag-ify (not possible for test probably)
-	# same as emake web, however this must be done in order
-	emake web-deps
-	emake web-build
+	# must be done in order, can't be parallelized anyways
+	emake web -j1
 
 	#CGO_ENABLED=1 ego build -linkmode=external -extldflags=-static -s -w -X main.version="{{.Version}}" -X "main.commit={{.Commit}}" -X "main.date={{.Date}}"
 	CGO_ENABLED=1 ego build
