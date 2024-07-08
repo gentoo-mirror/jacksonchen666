@@ -1,13 +1,13 @@
 BDEPEND=dev-python/mkdocs dev-python/mkdocs-material dev-python/mkdocs-minify-plugin net-libs/nodejs[npm] >=dev-lang/go-1.20:= app-arch/unzip
 DEFINED_PHASES=compile configure install unpack
-DESCRIPTION=HTTP-based pub-sub notification service
+DESCRIPTION=Simple pub-sub notification service
 EAPI=8
-HOMEPAGE=https://github.com/binwiederhier/ntfy
+HOMEPAGE=https://ntfy.sh
 INHERIT=go-module
 KEYWORDS=~arm64
-LICENSE=Apache-2.0 GPL-2
+LICENSE=Apache-2.0 GPL-2 Apache-2.0 MIT BSD BSD-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.11.0.tar.gz -> ntfy-2.11.0.tar.gz https://files.jacksonchen666.com/tmp/ntfy-2.11.0-vendor.tar.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	dbefaac6fd7019213514bccd65949d9a	go-module	83fd3ed1657cfc316c93d6a37018290d
-_md5_=23a7350d57a21ac2b953c960e0fd9ec1
+_md5_=fa78518d870222f84ce86078bdac9cc5
