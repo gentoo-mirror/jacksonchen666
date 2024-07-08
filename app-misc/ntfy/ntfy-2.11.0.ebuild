@@ -13,7 +13,11 @@ SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -
 # https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Vendor_tarball
 SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 
-# TODO: 9999
+# TODO: USE flag to toggle server components (including web and docs)
+# https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L55-L56
+# TODO: include other files as well
+# https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L82-L100
+
 # TODO: check with third party deps
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
@@ -29,7 +33,7 @@ BDEPEND="
 	dev-python/mkdocs-minify-plugin
 	net-libs/nodejs[npm]
 "
-# TODO
+# TODO: don't do these
 FEATURES="-network-sandbox -test"
 
 src_configure() {
