@@ -9,6 +9,6 @@
 		<remote-id type="github">binwiederhier/ntfy</remote-id>
 	</upstream>
 	<use>
-		<flag name="server">Build server-side code (including web interface and documentation)</flag>
+		<flag name="server">Build server-side code (including web interface)</flag>
 	</use>
 </pkgmetadata>

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit go-module
+inherit go-module systemd
 # update on every bump
 GIT_COMMIT=d11b100
 
@@ -29,14 +29,17 @@ KEYWORDS="~arm64"
 #DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="
-	server? (
+	doc? (
 		dev-python/mkdocs
 		dev-python/mkdocs-material
 		dev-python/mkdocs-minify-plugin
+	)
+	server? (
 		net-libs/nodejs[npm]
 	)
 "
-IUSE="+server"
+# XXX: default optional server?
+IUSE="+server doc"
 # TODO: make test succeed
 RESTRICT="test"
 # XXX: try to not do this (doesn't work with npm and its vite)
@@ -50,6 +53,10 @@ src_configure() {
 		GOFLAGS+=" -tags=noserver"
 		CGO_ENABLED=0
 	fi
+	if use server && ! use doc; then
+		ewarn "server USE flag is enabled but doc USE flag isn't,"
+		ewarn "documentation linked on the web UI will not be available!"
+	fi
 }
 
 src_prepare() {
@@ -62,14 +69,13 @@ src_prepare() {
 }
 
 src_compile() {
-	if ! use server; then
-		# filler files required, even when server isn't enabled
-		emake cli-deps-static-sites
-	fi
+	emake cli-deps-static-sites
 
+	# pre-requisites, embedded in binary
 	if use server; then
-		# pre-requisites, embedded in binary
 		emake -j1 web-build
+	fi
+	if use doc; then
 		mkdocs build
 	fi
 
@@ -82,6 +88,21 @@ src_compile() {
 
 src_install() {
 	dobin ntfy
-	# TODO: service files
-	# TODO: openrc files? (local file?)
+
+	# https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L82-L100
+	insinto /etc/${PN}/
+	cp client/client.yml client/client.yaml.example || die
+	doins client/client.yaml.example
+	if use server; then
+		cp server/server.yml server/server.yaml.example || die
+		doins server/server.yaml.example
+	fi
+
+	systemd_dounit client/ntfy-client.service
+	if use server; then
+		systemd_dounit server/ntfy.service
+	fi
+	# TODO: openrc files (local file?)
+
+	HTML_DOCS="server/docs/" einstalldocs
 }
