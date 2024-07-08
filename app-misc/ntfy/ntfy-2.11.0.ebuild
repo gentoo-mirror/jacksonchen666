@@ -26,10 +26,12 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 # TODO
-BDEPEND="dev-python/mkdocs
+BDEPEND="
+	dev-python/mkdocs
 	dev-python/mkdocs-material
 	dev-python/mkdocs-minify-plugin
-	net-libs/nodejs[npm]"
+	net-libs/nodejs[npm]
+"
 
 src_configure() {
 	# TODO: fix -X
