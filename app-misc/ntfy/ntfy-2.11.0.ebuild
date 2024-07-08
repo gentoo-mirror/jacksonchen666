@@ -14,6 +14,7 @@ SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -
 SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 # XXX: figure out available architectures and how to build tem
 
+# TODO: 9999
 # TODO: check with third party deps
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 SLOT="0"
@@ -28,27 +29,22 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_configure() {
-	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -linkmode=external -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
-	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo"
-	# XXX: check goreleaser and do something like that
-	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -extldflags=-static -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}"
+	# TODO: fix -X
+	# https://wiki.gentoo.org/wiki/Go_ebuild_tricks#go_tags
+	#GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w -ldflags=-X=main.version={{.Version}} -ldflags=-X=main.commit={{.Commit}} -ldflags=-X=main.date={{.Date}}"
+	GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
 }
 
 src_compile() {
-    #ego build
-
-	# XXX: explore other targets
-	# go check the upstream .goreleaser.yml file:
-	#emake cli-linux-server
-
-	# https://docs.ntfy.sh/develop/
 	emake cli-deps-static-sites
 
-	# XXX: USE flag-ify (not possible for test probably)
+	# pre-requisites, embedded in binary
 	# must be done in order, can't be parallelized anyways
-	emake web -j1
+	# XXX: USE flag-ify (not possible for test probably)
+	# TODO: deal with network sandbox
+	emake -j1 web
+	emake -j1 docs
 
-	#CGO_ENABLED=1 ego build -linkmode=external -extldflags=-static -s -w -X main.version="{{.Version}}" -X "main.commit={{.Commit}}" -X "main.date={{.Date}}"
 	CGO_ENABLED=1 ego build
 }
 
