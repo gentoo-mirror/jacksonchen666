@@ -18,8 +18,10 @@ SRC_URI+=" https://files.jacksonchen666.com/tmp/${P}-vendor.tar.xz"
 # TODO: include other files as well
 # https://github.com/binwiederhier/ntfy/blob/9d3fc20e583564e40af5afb90233f4714fdfcb4c/.goreleaser.yml#L82-L100
 
-# TODO: check with third party deps
 LICENSE="Apache-2.0 GPL-2"
+# third party deps
+# (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
+LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
 KEYWORDS="~arm64"
 
