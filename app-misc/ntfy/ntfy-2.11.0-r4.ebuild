@@ -56,6 +56,8 @@ pkg_pretend() {
 }
 
 src_configure() {
+	default
+
 	if use server; then
 		GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
 		CGO_ENABLED=1
