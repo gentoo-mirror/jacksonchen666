@@ -48,6 +48,13 @@ RESTRICT="test"
 # XXX: try to not do this (doesn't work with npm and its vite)
 RESTRICT+=" network-sandbox"
 
+pkg_pretend() {
+	if use server && ! use doc; then
+		ewarn "server USE flag is enabled but doc USE flag isn't, documentation linked on"
+		ewarn "the web UI will not be available!"
+	fi
+}
+
 src_configure() {
 	if use server; then
 		GOFLAGS+=" -tags=sqlite_omit_load_extension,osusergo,netgo -ldflags=-linkmode=external -ldflags=-extldflags=-static -ldflags=-s -ldflags=-w"
@@ -55,10 +62,6 @@ src_configure() {
 	else
 		GOFLAGS+=" -tags=noserver"
 		CGO_ENABLED=0
-	fi
-	if use server && ! use doc; then
-		ewarn "server USE flag is enabled but doc USE flag isn't, documentation linked on"
-		ewarn "the web UI will not be available!"
 	fi
 }
 
