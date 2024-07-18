@@ -6,7 +6,7 @@ EAPI=8
 inherit acct-user
 
 DESCRIPTION="User for ntfy"
-ACCT_USER_ID=620
+ACCT_USER_ID=-1
 ACCT_USER_GROUPS=( ${PN} )
 
 acct-user_add_deps
