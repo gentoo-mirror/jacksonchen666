@@ -6,4 +6,4 @@ EAPI=8
 inherit acct-group
 
 DESCRIPTION="Group for ntfy"
-ACCT_GROUP_ID=620
+ACCT_GROUP_ID=-1
