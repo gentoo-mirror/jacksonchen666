@@ -1,6 +1,9 @@
 # Copyright 2024 JacksonChen666
 # Distributed under the terms of the GNU General Public License v2
 
+# XXX: prepared cache directories (not via post install because QA notice)
+# via dir creation in service files
+
 EAPI=8
 inherit go-module systemd
 # update on every bump
@@ -38,9 +41,6 @@ BDEPEND="
 	)
 	${DEPEND}
 "
-PATCHES=(
-	"${FILESDIR}/0001-suggest-prepared-paths.patch"
-)
 # XXX: default optional server?
 IUSE="+server doc"
 # TODO: make test succeed
@@ -121,17 +121,6 @@ src_install() {
 	keepdir /var/lib/${PN}/
 	chown -R ntfy:ntfy "${D}/var/lib/${PN}/" || die
 	chmod -R 750 "${D}/var/lib/${PN}/" || die
-
-	# TODO: fix QA notice
-	dodir  var/cache/${PN}/
-	keepdir /var/cache/${PN}/
-	chown -R ntfy:ntfy "${D}/var/cache/${PN}/" || die
-	chmod -R 750 "${D}/var/cache/${PN}/" || die
-
-	dodir /var/cache/${PN}/attachments/
-	keepdir /var/cache/${PN}/attachments/
-	chown -R ntfy:ntfy "${D}/var/cache/${PN}/attachments/" || die
-	chmod -R 750 "${D}/var/cache/${PN}/attachments/" || die
 
 	# init files
 	systemd_dounit client/ntfy-client.service
