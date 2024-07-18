@@ -12,5 +12,5 @@ RDEPEND=acct-group/ntfy acct-user/ntfy
 RESTRICT=test network-sandbox strip
 SLOT=0
 SRC_URI=https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.11.0.tar.gz -> ntfy-2.11.0.tar.gz https://files.jacksonchen666.com/gentoo/ntfy-2.11.0-vendor.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	systemd	c8b03e8df84486aa991d4396686e8942
-_md5_=c5fa874696f903fe88be81c3ddbb3d4c
+_eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	7eb56e61e641d6db098d57fb37477c44	go-module	83fd3ed1657cfc316c93d6a37018290d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	systemd	c8b03e8df84486aa991d4396686e8942	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_md5_=8fb3d0f1a3045f8e3908daa161cc26d6
