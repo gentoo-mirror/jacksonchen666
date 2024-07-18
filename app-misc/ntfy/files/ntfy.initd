@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 1999-2024 Gentoo Authors, JacksonChen666
+# Distributed under the terms of the GNU General Public License v2
+
+# server unit, not client
+# this tries to be as close as possible to the upstream systemd unit
+command=/usr/bin/ntfy
+command_args="serve ${ntfy_serve_opts:-${NTFY_SERVE_OPTS}}"
+command_background=true
+command_user="ntfy:ntfy"
+capabilities="cap_net_bind_service"
+extra_started_commands="reload"
+rc_ulimit="-n 10000"
+
+depend() {
+    need net
+}
+
+reload() {
+  ebegin "Reloading ${RC_SVCNAME}"
+  start-stop-daemon --signal HUP --pidfile "${pidfile}"
+  eend $?
+}

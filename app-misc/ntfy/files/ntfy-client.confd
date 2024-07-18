@@ -1,0 +1,2 @@
+# conf.d file for ntfy-client
+NTFY_SUBSCRIBE_OPTS="--config /etc/ntfy/client.yml --from-config"

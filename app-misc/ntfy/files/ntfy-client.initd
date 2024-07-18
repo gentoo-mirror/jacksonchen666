@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Copyright 1999-2024 Gentoo Authors, JacksonChen666
+# Distributed under the terms of the GNU General Public License v2
+
+# this tries to be as close as possible to the upstream systemd unit
+command=/usr/bin/ntfy
+command_args="subscribe ${ntfy_subscribe_opts:-${NTFY_SUBSCRIBE_OPTS}}"
+command_background=true
+command_user="ntfy:ntfy"
+
+depend() {
+    # TODO: https://github.com/OpenRC/openrc/blob/master/service-script-guide.md#network-clients
+    need net
+}

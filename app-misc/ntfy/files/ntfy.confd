@@ -1,0 +1,2 @@
+# conf.d file for ntfy
+NTFY_SERVE_OPTS="--no-log-dates --config /etc/ntfy/server.yml"

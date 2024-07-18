@@ -128,10 +128,13 @@ src_install() {
 
 	# init files
 	systemd_dounit client/ntfy-client.service
+	doinitd "${FILESDIR}"/ntfy-client.initd
+	doconfd "${FILESDIR}"/ntfy-client.confd
 	if use server; then
 		systemd_dounit server/ntfy.service
+		doinitd "${FILESDIR}"/ntfy.initd
+		doconfd "${FILESDIR}"/ntfy.confd
 	fi
-	# TODO: openrc files (local file?)
 
 	# docs
 	HTML_DOCS="server/docs/" einstalldocs
