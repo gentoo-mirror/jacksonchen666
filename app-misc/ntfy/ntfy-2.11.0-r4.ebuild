@@ -20,6 +20,7 @@ SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
 
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
+# checked on ntfy 2.11.0
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
 #LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
