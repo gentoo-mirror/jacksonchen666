@@ -24,7 +24,7 @@ LICENSE="|| ( Apache-2.0 GPL-2 )"
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
 # TODO: inspect and enable (see net-im/conduit::guru for example)
 # TODO: check on npm (used for building)
-#LICENSE+=" Apache-2.0 MIT BSD BSD-2"
+LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
