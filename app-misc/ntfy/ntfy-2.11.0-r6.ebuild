@@ -118,13 +118,13 @@ src_install() {
 		doins server/server.yml.example
 	fi
 	chown -R ntfy:ntfy "${D}/etc/${PN}/" || die
-	chmod -R 640 "${D}/etc/${PN}/" || die
+	chmod -R u=rwX,g=rX "${D}/etc/${PN}/" || die
 
 	# referenced folders in example config
 	dodir /var/lib/${PN}/
 	keepdir /var/lib/${PN}/
 	chown -R ntfy:ntfy "${D}/var/lib/${PN}/" || die
-	chmod -R 640 "${D}/var/lib/${PN}/" || die
+	chmod -R u=rwX,g=rX "${D}/var/lib/${PN}/" || die
 
 	# init files
 	systemd_dounit client/ntfy-client.service
