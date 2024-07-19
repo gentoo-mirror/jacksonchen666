@@ -128,12 +128,12 @@ src_install() {
 
 	# init files
 	systemd_dounit client/ntfy-client.service
-	doinitd "${FILESDIR}"/ntfy-client.initd
-	doconfd "${FILESDIR}"/ntfy-client.confd
+	doinitd "${FILESDIR}"/init.d/ntfy-client
+	doconfd "${FILESDIR}"/conf.d/ntfy-client
 	if use server; then
 		systemd_dounit server/ntfy.service
-		doinitd "${FILESDIR}"/ntfy.initd
-		doconfd "${FILESDIR}"/ntfy.confd
+		doinitd "${FILESDIR}"/init.d/ntfy
+		doconfd "${FILESDIR}"/conf.d/ntfy
 	fi
 
 	# docs
