@@ -9,7 +9,9 @@ command_args="serve ${ntfy_serve_opts:-${NTFY_SERVE_OPTS}}"
 command_background=true
 command_user="ntfy:ntfy"
 pidfile="/run/${RC_SVCNAME}.pid"
-capabilities="cap_net_bind_service"
+# XXX: capabilities requires USE flag on openrc which is off by default...
+# without it, running with its own HTTPS but unprivileged isn't possible
+#capabilities="cap_net_bind_service"
 extra_started_commands="reload"
 rc_ulimit="-n 10000"
 
