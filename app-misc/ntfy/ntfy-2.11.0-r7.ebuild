@@ -26,7 +26,7 @@ LICENSE="|| ( Apache-2.0 GPL-2 )"
 # TODO: check on npm (used for building)
 #LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
-KEYWORDS="~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
 DEPEND="
 	acct-group/ntfy
