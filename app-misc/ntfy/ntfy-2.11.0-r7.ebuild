@@ -22,7 +22,6 @@ LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
 # checked on ntfy 2.11.0
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
-# TODO: inspect and enable (see net-im/conduit::guru for example)
 # TODO: check on npm (used for building)
 LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
