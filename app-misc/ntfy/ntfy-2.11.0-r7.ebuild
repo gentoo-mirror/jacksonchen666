@@ -22,7 +22,7 @@ LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
 # checked on ntfy 2.11.0
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
-# TODO: check on npm (used for building)
+# TODO: check on npm (used for building web stuff)
 LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
