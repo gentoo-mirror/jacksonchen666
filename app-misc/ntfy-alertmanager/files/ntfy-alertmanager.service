@@ -8,7 +8,8 @@ Type=simple
 User=ntfy-alertmanager
 Group=ntfy-alertmanager
 Restart=always
-ExecStart=/usr/bin/ntfy-alertmanager
+Environment=CONFIG_FILE=/etc/ntfy-alertmanager/config
+ExecStart=/usr/bin/ntfy-alertmanager --config "$CONFIG_FILE"
 
 [Install]
 WantedBy=multi-user.target

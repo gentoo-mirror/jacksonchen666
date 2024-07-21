@@ -4,7 +4,7 @@
 # TODO: verify-sig
 
 EAPI=8
-inherit go-module
+inherit go-module systemd
 
 DESCRIPTION="A bridge between ntfy and Alertmanager"
 HOMEPAGE="https://hub.xenrox.net/~xenrox/ntfy-alertmanager/"
@@ -45,8 +45,7 @@ src_install() {
 	# init files
 	doinitd "${FILESDIR}/init.d/ntfy-alertmanager"
 	doconfd "${FILESDIR}/conf.d/ntfy-alertmanager"
-
-	# TODO: systemd files
+	systemd_dounit "${FILESDIR}/ntfy-alertmanager.service"
 }
 
 src_test() {
