@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+# Copyright 1999-2024 Gentoo Authors, JacksonChen666
+# Distributed under the terms of the GNU General Public License v2
+
+command=/usr/bin/ntfy-alertmanager
+command_args="${ntfy_alertmanager_opts:-${NTFY_ALERTMANAGER_OPTS}}"
+command_background=true
+command_user="ntfy-alertmanager:ntfy-alertmanager"
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+    need net
+}

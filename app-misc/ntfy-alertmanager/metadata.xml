@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jackson@jacksonchen666.com</email>
+		<name>Jackson</name>
+	</maintainer>
+	<!-- the upstream is https://hub.xenrox.net/~xenrox/ntfy-alertmanager/ but that can't be added -->
+</pkgmetadata>

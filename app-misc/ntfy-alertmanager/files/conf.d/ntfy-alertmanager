@@ -1,0 +1,2 @@
+# conf.d file for ntfy-alertmanager
+NTFY_ALERTMANAGER_OPTS="--config /etc/ntfy-alertmanager/config"
