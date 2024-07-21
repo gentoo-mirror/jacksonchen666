@@ -49,6 +49,8 @@ IUSE="+server doc"
 RESTRICT="test"
 # XXX: try to not do this (doesn't work with npm and its vite)
 RESTRICT+=" network-sandbox"
+# disabled due to lack of mirrors
+RESTRICT+="mirror"
 
 pkg_pretend() {
 	if use server && ! use doc; then
