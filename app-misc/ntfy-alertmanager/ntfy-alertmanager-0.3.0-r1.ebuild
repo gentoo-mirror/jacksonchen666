@@ -18,7 +18,7 @@ LICENSE="AGPL-3"
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
 LICENSE+=" MIT BSD BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm64"
 # disabled due to lack of mirrors
 RESTRICT="mirror"
 
