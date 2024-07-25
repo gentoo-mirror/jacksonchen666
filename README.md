@@ -23,6 +23,8 @@ but that's also not guaranteed.
 Packages will only have an unstable keyword if it has been vaguely tested on
 that architecture.
 
+<!-- Note to self: https://projects.gentoo.org/qa/policy-guide/ -->
+
 ## Setup and usage
 
 Put the following thing in `/etc/portage/repos.conf/jacksonchen666.conf`
