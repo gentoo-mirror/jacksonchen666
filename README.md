@@ -49,6 +49,8 @@ date.
    the repository, somehow)
 2. Install `dev-util/pkgdev` and prefer `pkgdev commit` over `git commit`
 3. Do your work in `/var/db/repos/jacksonchen666/`
+4. Maybe add `auto-sync = no` to the
+   `/etc/portage/repos.conf/jacksonchen666.conf` file
 
 ## Potential caveats
 
