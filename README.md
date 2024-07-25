@@ -8,7 +8,7 @@ Contains stuff I want as packages on a Gentoo Linux system.
 Bug reports and contributions currently go to `/dev/null` as I haven't setup
 any infrastructure for those things.
 
-[^contributions_status]: Contributions are currently not open.
+<!-- update resources for development on contributions for this repo as well -->
 
 ## Quality
 
@@ -74,7 +74,7 @@ downloads.
 ## Resources for development
 
 If you want to make your own ebuild repository (or contribute to this one,
-if contributions are open[^contributions_status]), here's some helpful
+if contributions are open (it is not)), here's some helpful
 resources:
 - [Basic guide to write Gentoo Ebuilds](https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds) (especially the "See also" section)
 - [Creating an ebuild repository](https://wiki.gentoo.org/wiki/Eselect/Repository#Create_a_new_ebuild_repository)
