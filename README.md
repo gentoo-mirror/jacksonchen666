@@ -61,6 +61,9 @@ repositories:
 - The [GURU overlay][guru]
 - The [asahi overlay][asahi]
 
+jacksonchen666 also uses their Gentoo system with the systemd init system
+instead of the OpenRC init system.
+
 [guru]:https://wiki.gentoo.org/wiki/Project:GURU
 
 [asahi]:https://github.com/gentoo-mirror/asahi
