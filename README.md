@@ -59,7 +59,7 @@ repositories:
 - The already included Gentoo ebuild repository (included in pretty much all
   Gentoo systems by default)
 - The [GURU overlay][guru]
-- The [asahi overlay][asahi]
+- The [asahi overlay][asahi] (on the only arm64 machine)
 
 jacksonchen666 also uses their Gentoo system with the systemd init system
 instead of the OpenRC init system.
