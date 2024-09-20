@@ -29,8 +29,7 @@ RESTRICT+=" mirror"
 
 src_configure() {
 	default
-	#cmake -B build -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_BUILD_TYPE=RelWithDebInfo
-	cmake -B build -DCMAKE_INSTALL_PREFIX="/usr"
+	cmake -B build -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_BUILD_TYPE=RelWithDebInfo
 }
 
 src_compile() {
