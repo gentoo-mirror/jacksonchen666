@@ -11,7 +11,7 @@ GIT_COMMIT=d11b100
 
 DESCRIPTION="Simple pub-sub notification service"
 HOMEPAGE="https://ntfy.sh"
-SRC_URI="https://github.com/binwiederhier/ntfy/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/binwiederhier/ntfy/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 # https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Vendor_tarball
 SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
 # node modules couldn't be figured out and isn't included, here's old notes:
