@@ -6,6 +6,6 @@
 		<name>Jackson</name>
 	</maintainer>
 	<upstream>
-        <remote-id type="github">dimtpap/obs-pipewire-audio-capture</remote-id>
+		<remote-id type="github">dimtpap/obs-pipewire-audio-capture</remote-id>
 	</upstream>
 </pkgmetadata>

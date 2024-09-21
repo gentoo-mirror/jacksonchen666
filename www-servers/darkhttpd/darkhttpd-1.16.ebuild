@@ -6,12 +6,13 @@ EAPI=8
 DESCRIPTION="When you need a web server in a hurry"
 HOMEPAGE="https://unix4lyfe.org/darkhttpd/"
 SRC_URI="https://github.com/emikulic/darkhttpd/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-# tests fail
-RESTRICT="test"
 
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
+
+# tests fail
+RESTRICT="test"
 
 src_install() {
 	dodoc README.md
