@@ -34,10 +34,11 @@ src_configure() {
 
 src_compile() {
 	cd build
-	default
+	emake
 }
 
 src_install() {
+	dodoc README.md
 	cd build
-	default
+	emake install
 }
