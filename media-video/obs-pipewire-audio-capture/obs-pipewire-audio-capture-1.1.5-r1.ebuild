@@ -20,6 +20,7 @@ RDEPEND="
 	${DEPEND}
 "
 BDEPEND="
+	${DEPEND}
 	dev-build/cmake
 "
 # no tests
