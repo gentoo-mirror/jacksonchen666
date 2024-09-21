@@ -1,4 +1,4 @@
-BDEPEND=dev-build/cmake
+BDEPEND=media-video/wireplumber >=media-video/obs-studio-28.0.0 >=media-video/pipewire-0.3.62 dev-build/cmake
 DEFINED_PHASES=compile configure install
 DEPEND=media-video/wireplumber >=media-video/obs-studio-28.0.0 >=media-video/pipewire-0.3.62
 DESCRIPTION=PipeWire audio capturing for OBS Studio
@@ -10,4 +10,4 @@ RDEPEND=media-video/wireplumber >=media-video/obs-studio-28.0.0 >=media-video/pi
 RESTRICT=test mirror
 SLOT=0
 SRC_URI=https://github.com/dimtpap/obs-pipewire-audio-capture/archive/1.1.5.tar.gz -> obs-pipewire-audio-capture-1.1.5.tar.gz
-_md5_=3e4d41c09c0214b2e191102c13c6b6dc
+_md5_=aae0e705bae198d4fc70add3c0dc1f66
