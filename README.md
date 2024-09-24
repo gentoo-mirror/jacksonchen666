@@ -87,3 +87,4 @@ resources:
 - <https://wiki.gentoo.org/wiki/Ebuild_repository>
 - [Listing your ebuild repository in `eselect repositories`](https://wiki.gentoo.org/wiki/Project:Overlays/Overlays_guide)
 - <https://repos.gentoo.org/>
+- [eclass reference](https://devmanual.gentoo.org/eclass-reference/)
