@@ -1,9 +1,6 @@
 # Copyright 2024 JacksonChen666
 # Distributed under the terms of the GNU General Public License v2
 
-# XXX: prepared cache directories (not via post install because QA notice)
-# via dir creation in service files
-
 EAPI=8
 inherit go-module systemd tmpfiles
 # update on every bump
