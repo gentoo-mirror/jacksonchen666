@@ -134,7 +134,7 @@ LICENSE+="
 "
 
 SLOT="0"
-KEYWORDS="-amd64"
+KEYWORDS="~amd64"
 DEPEND="man? ( app-text/ronn-ng )"
 BDEPEND="
 	${DEPEND}
