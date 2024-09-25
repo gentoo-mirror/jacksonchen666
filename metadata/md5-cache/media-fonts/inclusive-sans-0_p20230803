@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=compile install postinst postrm setup
+DESCRIPTION=A font designed for accessibility and readability
+EAPI=8
+HOMEPAGE=https://www.oliviaking.com/inclusive-sans
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=OFL-1.1
+RESTRICT=test mirror
+SLOT=0
+SRC_URI=https://github.com/LivKing/Inclusive-Sans/archive/97577e1a7c08db105c19bae35ea17b1a8f81ec5e.tar.gz -> inclusive-sans-0_p20230803.gh.tar.gz
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=377bb909fe2b3d4438b2248084fe7861
