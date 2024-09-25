@@ -12,16 +12,17 @@ if [[ "${PV}" == *"9999"* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/LivKing/Inclusive-Sans"
 else
-	GIT_COMMIT=97577e1
+	GIT_COMMIT=97577e1a7c08db105c19bae35ea17b1a8f81ec5e
 	SRC_URI="
 		https://github.com/LivKing/Inclusive-Sans/archive/${GIT_COMMIT}.tar.gz
 			-> ${P}.gh.tar.gz
 	"
+	S="${WORKDIR}/Inclusive-Sans-${GIT_COMMIT}"
 fi
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 RESTRICT="test mirror"
 
 FONT_S="${S}/fonts/ttf"
