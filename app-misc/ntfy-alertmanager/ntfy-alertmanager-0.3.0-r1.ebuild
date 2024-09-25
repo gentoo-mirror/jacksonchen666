@@ -26,6 +26,7 @@ DEPEND="
 	acct-group/ntfy-alertmanager
 	acct-user/ntfy-alertmanager
 "
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	ego build -ldflags "-X main.version=v${PV}"
