@@ -5,7 +5,7 @@
         <email>jackson@jacksonchen666.com</email>
         <name>Jackson</name>
     </maintainer>
-	<upstream>
-		<remote-id type="github">LivKing/Inclusive-Sans</remote-id>
-	</upstream>
+    <upstream>
+        <remote-id type="github">LivKing/Inclusive-Sans</remote-id>
+    </upstream>
 </pkgmetadata>
