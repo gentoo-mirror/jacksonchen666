@@ -54,22 +54,8 @@ date.
 
 ## Potential caveats
 
-jacksonchen666 uses their Gentoo system with the following ebuild
-repositories:
-- The already included Gentoo ebuild repository (included in pretty much all
-  Gentoo systems by default)
-- The [GURU overlay][guru]
-- The [asahi overlay][asahi] (on the only arm64 machine)
-
 jacksonchen666 also uses their Gentoo system with the systemd init system
 instead of the OpenRC init system.
-
-[guru]:https://wiki.gentoo.org/wiki/Project:GURU
-
-[asahi]:https://github.com/gentoo-mirror/asahi
-
-They might forget to use only stuff from the Gentoo ebuild repository. Or
-they might have to resort to things in other repositories.
 
 ## License
 
