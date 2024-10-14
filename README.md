@@ -54,8 +54,10 @@ date.
 
 ## Potential caveats
 
-jacksonchen666 also uses their Gentoo system with the systemd init system
-instead of the OpenRC init system.
+jacksonchen666 uses their Gentoo system with the systemd init system instead
+of the OpenRC init system. OpenRC will be sparsely tested.
+
+See also the ["Quality" section](#quality)
 
 ## License
 
