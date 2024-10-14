@@ -14,7 +14,7 @@ SRC_URI="https://github.com/s-hamann/desec-dns/archive/v${PV}.tar.gz -> ${P}.gh.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 # TODO: 9999 (pyproject versioning?)
 
