@@ -47,7 +47,7 @@ LICENSE+="
 	Unlicense
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 -arm64"
 
 DEPEND="
 	acct-group/ntfy
