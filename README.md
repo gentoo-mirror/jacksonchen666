@@ -60,7 +60,7 @@ instead of the OpenRC init system.
 ## License
 
 Pretty much everything is GPL-v2 here. Well, the ebuilds. Not the things it
-downloads.
+downloads or compiles or installs.
 
 ## Resources for development
 
