@@ -25,7 +25,7 @@ LICENSE="GPL-3+"
 # go deps, checked ijq 1.1.2
 LICENSE+=" BSD MIT Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 IUSE="doc"
 #DEPEND=""
