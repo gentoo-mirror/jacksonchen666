@@ -9,7 +9,7 @@ SRC_URI="https://github.com/emikulic/darkhttpd/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 # tests fail
 RESTRICT="test"
