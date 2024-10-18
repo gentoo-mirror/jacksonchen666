@@ -7,11 +7,13 @@ EAPI=8
 PYTHON_COMPAT=( python3_{9..13} )
 
 #inherit meson ninja-utils desktop gnome2-utils
-inherit meson gnome2-utils python-single-r1
+#inherit meson gnome2-utils python-single-r1
+inherit meson gnome2-utils
 
 # TODO: l10n USE
 # TODO: deps (find, bare system)
 # TODO: deps (sort into DEPEND and RDEPEND)
+# TODO: fix #! for /usr/bin/blanket (meson and python-single-r1)
 
 DESCRIPTION="Listen to ambient sounds"
 HOMEPAGE="https://apps.gnome.org/Blanket/"
@@ -21,7 +23,7 @@ LICENSE="GPL-3"
 # sounds licensing
 LICENSE+=" CC0-1.0 CC-BY-4.0 CC-BY-3.0 CC-BY-SA-4.0 public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 	#dev-lang/python
 DEPEND="
