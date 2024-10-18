@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <longdescription>Improve focus and increase your productivity by listening to different ambient sounds
+
+        Also can help you to fall asleep in a noisy environment.</longdescription>
+    <maintainer type="person">
+        <email>jackson@jacksonchen666.com</email>
+        <name>Jackson</name>
+    </maintainer>
+    <upstream>
+        <remote-id type="github">binwiederhier/ntfy</remote-id>
+        <bugs-to>https://github.com/rafaelmardojai/blanket/issues</bugs-to>
+    </upstream>
+</pkgmetadata>
