@@ -14,6 +14,7 @@ inherit meson gnome2-utils
 # TODO: deps (find, bare system)
 # TODO: deps (sort into DEPEND and RDEPEND)
 # TODO: fix #! for /usr/bin/blanket (meson and python-single-r1)
+# TODO: match build-aux/meson/postinstall.py
 
 DESCRIPTION="Listen to ambient sounds"
 HOMEPAGE="https://apps.gnome.org/Blanket/"
