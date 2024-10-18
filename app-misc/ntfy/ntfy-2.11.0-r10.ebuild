@@ -91,7 +91,6 @@ RESTRICT+=" mirror"
 # see node_modules SRC_URI for more info
 RESTRICT+=" network-sandbox"
 
-
 pkg_pretend() {
 	if use server && ! use doc; then
 		ewarn "server USE flag is enabled but doc USE flag isn't, documentation linked on"
