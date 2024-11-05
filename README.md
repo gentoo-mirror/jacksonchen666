@@ -27,6 +27,28 @@ that architecture.
 
 ## Setup and usage
 
+1. `emerge --ask --noreplace app-eselect/eselect-repository dev-vcs/git` to
+   get the program necessary to enable and sync the repository (see "Old
+   manual setup instructions" if you don't want
+   `app-eselect/eselect-repository`)
+2. Add repository by running `eselect repository enable jacksonchen666`
+3. `emerge --sync jacksonchen666` (or use `emaint`) should get you up to
+   date.
+
+### Development setup
+
+0. (Maybe?) Read the "Old manual setup instructions" process (or ignore it
+   and do a full clone, idk)
+1. Run `git remote set-url --push origin
+   git@git.sr.ht:~jacksonchen666/gentoo-overlay` (if you have push access to
+   the repository, somehow)
+2. Install `dev-util/pkgdev` and prefer `pkgdev commit` over `git commit`
+3. Do your work in `/var/db/repos/jacksonchen666/`
+4. Maybe add `auto-sync = no` to the
+   `/etc/portage/repos.conf/jacksonchen666.conf` file
+
+### Old manual setup instructions
+
 Put the following thing in `/etc/portage/repos.conf/jacksonchen666.conf`
 
 ```ini
@@ -39,18 +61,6 @@ priority = 100
 
 Then `emerge --sync jacksonchen666` (or use `emaint`) should get you up to
 date.
-
-### Development setup
-
-0. (Maybe?) Read the above setup process (or ignore it and do a full clone,
-   idk)
-1. Run `git remote set-url --push origin
-   git@git.sr.ht:~jacksonchen666/gentoo-overlay` (if you have push access to
-   the repository, somehow)
-2. Install `dev-util/pkgdev` and prefer `pkgdev commit` over `git commit`
-3. Do your work in `/var/db/repos/jacksonchen666/`
-4. Maybe add `auto-sync = no` to the
-   `/etc/portage/repos.conf/jacksonchen666.conf` file
 
 ## Potential caveats
 
