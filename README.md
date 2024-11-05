@@ -5,10 +5,28 @@ either. I'm not sure.
 
 Contains stuff I want as packages on a Gentoo Linux system.
 
-Bug reports and contributions currently go to `/dev/null` as I haven't setup
-any infrastructure for those things.
+Bug reports outside of Gentoo's Bugzilla and all patches are currently being
+redirected to `/dev/null` as the infrastructure currently doesn't exist yet.
 
 <!-- update resources for development on contributions for this repo as well -->
+
+## Bug reporting
+
+You can [make a bug report on the Gentoo Bugzilla][gbugzilla] (requires
+account). The "Product" should be "Gentoo Linux" and the "Component" should
+be "Overlay", which are ensured with the link. Attachments can be added
+after submitting your bug report.
+
+The summary should include "jacksonchen666" somewhere, like in a package
+atom as `::jacksonchen666`, or there should be something like
+`[jacksonchen666]` prefixed, so bugs regarding this overlay can be easily
+found.
+
+[gbugzilla]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays&format=guided
+
+([Export bug report mode][gbugexpert])
+
+[gbugexpert]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays
 
 ## Quality
 
