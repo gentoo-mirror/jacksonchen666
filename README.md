@@ -5,17 +5,35 @@ either. I'm not sure.
 
 Contains stuff I want as packages on a Gentoo Linux system.
 
-Bug reports and contributions currently go to `/dev/null` as I haven't setup
-any infrastructure for those things.
+Bug reports outside of Gentoo's Bugzilla and all patches are currently being
+redirected to `/dev/null` as the infrastructure currently doesn't exist yet.
 
 <!-- update resources for development on contributions for this repo as well -->
+
+## Bug reporting
+
+You can [make a bug report on the Gentoo Bugzilla][gbugzilla] (requires
+account). The "Product" should be "Gentoo Linux" and the "Component" should
+be "Overlay", which are ensured with the link. Attachments can be added
+after submitting your bug report.
+
+The summary should include "jacksonchen666" somewhere, like in a package
+atom as `::jacksonchen666`, or there should be something like
+`[jacksonchen666]` prefixed, so bugs regarding this overlay can be easily
+found.
+
+[gbugzilla]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays&format=guided
+
+([Export bug report mode][gbugexpert])
+
+[gbugexpert]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays
 
 ## Quality
 
 Not guaranteed. Insert all the disclaimers here of course.
 
-There may be testing in x86_64/amd64, but since jacksonchen666's main Gentoo
-machine runs on x86_64/amd64, packages will be less tested for arm64.
+jacksonchen666's main Gentoo machine runs on x86_64/amd64, so packages will
+be less tested for arm64.
 
 There may be attempts to follow Gentoo conventions for ebuilds and stuff,
 but that's also not guaranteed.
@@ -26,6 +44,28 @@ that architecture.
 <!-- Note to self: https://projects.gentoo.org/qa/policy-guide/ -->
 
 ## Setup and usage
+
+1. `emerge --ask --noreplace app-eselect/eselect-repository dev-vcs/git` to
+   get the program necessary to enable and sync the repository (see "Old
+   manual setup instructions" if you don't want
+   `app-eselect/eselect-repository`)
+2. Add repository by running `eselect repository enable jacksonchen666`
+3. `emerge --sync jacksonchen666` (or use `emaint`) should get you up to
+   date.
+
+### Development setup
+
+0. (Maybe?) Read the "Old manual setup instructions" process (or ignore it
+   and do a full clone, idk)
+1. Run `git remote set-url --push origin
+   git@git.sr.ht:~jacksonchen666/gentoo-overlay` (if you have push access to
+   the repository, somehow)
+2. Install `dev-util/pkgdev` and prefer `pkgdev commit` over `git commit`
+3. Do your work in `/var/db/repos/jacksonchen666/`
+4. Maybe add `auto-sync = no` to the
+   `/etc/portage/repos.conf/jacksonchen666.conf` file
+
+### Old manual setup instructions
 
 Put the following thing in `/etc/portage/repos.conf/jacksonchen666.conf`
 
@@ -39,18 +79,6 @@ priority = 100
 
 Then `emerge --sync jacksonchen666` (or use `emaint`) should get you up to
 date.
-
-### Development setup
-
-0. (Maybe?) Read the above setup process (or ignore it and do a full clone,
-   idk)
-1. Run `git remote set-url --push origin
-   git@git.sr.ht:~jacksonchen666/gentoo-overlay` (if you have push access to
-   the repository, somehow)
-2. Install `dev-util/pkgdev` and prefer `pkgdev commit` over `git commit`
-3. Do your work in `/var/db/repos/jacksonchen666/`
-4. Maybe add `auto-sync = no` to the
-   `/etc/portage/repos.conf/jacksonchen666.conf` file
 
 ## Potential caveats
 
