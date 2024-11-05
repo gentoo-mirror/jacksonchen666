@@ -14,8 +14,8 @@ any infrastructure for those things.
 
 Not guaranteed. Insert all the disclaimers here of course.
 
-There may be testing in x86_64/amd64, but since jacksonchen666's main Gentoo
-machine runs on x86_64/amd64, packages will be less tested for arm64.
+jacksonchen666's main Gentoo machine runs on x86_64/amd64, so packages will
+be less tested for arm64.
 
 There may be attempts to follow Gentoo conventions for ebuilds and stuff,
 but that's also not guaranteed.
