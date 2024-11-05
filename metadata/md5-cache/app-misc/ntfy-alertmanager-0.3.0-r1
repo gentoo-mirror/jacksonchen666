@@ -1,0 +1,15 @@
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install test unpack
+DEPEND=acct-group/ntfy-alertmanager acct-user/ntfy-alertmanager
+DESCRIPTION=A bridge between ntfy and Alertmanager
+EAPI=8
+HOMEPAGE=https://hub.xenrox.net/~xenrox/ntfy-alertmanager/
+INHERIT=go-module systemd
+KEYWORDS=~amd64 ~arm64
+LICENSE=AGPL-3 MIT BSD BSD-2
+RDEPEND=acct-group/ntfy-alertmanager acct-user/ntfy-alertmanager
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=https://git.xenrox.net/~xenrox/ntfy-alertmanager/refs/download/v0.3.0/ntfy-alertmanager-0.3.0.tar.gz https://files.jacksonchen666.com/gentoo/ntfy-alertmanager-0.3.0-vendor.tar.xz
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	df32d29550d40a92da723d3b8e17b467	systemd	54bd206bb5c4efac6ae28b6b006713b0
+_md5_=2b156304059f7eda86b04e6bf2c0af21

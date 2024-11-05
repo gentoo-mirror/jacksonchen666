@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst postrm setup unpack
+DESCRIPTION=A font designed for accessibility and readability
+EAPI=8
+HOMEPAGE=https://www.oliviaking.com/inclusive-sans
+INHERIT=font git-r3
+IUSE=X
+LICENSE=OFL-1.1
+PROPERTIES=live
+RESTRICT=test mirror
+SLOT=0
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=57a252c41ad25e4308a4a39febd779b0
