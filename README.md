@@ -24,7 +24,7 @@ found.
 
 [gbugzilla]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays&format=guided
 
-([Export bug report mode][gbugexpert])
+([Expert bug report mode][gbugexpert])
 
 [gbugexpert]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays
 
