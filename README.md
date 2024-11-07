@@ -33,7 +33,8 @@ found.
 Not guaranteed. Insert all the disclaimers here of course.
 
 jacksonchen666's main Gentoo machine runs on x86_64/amd64, so packages will
-be less tested for arm64.
+be less tested for arm64. Outside of that, there is no testing for
+architectures in x86_64/amd64 or arm64.
 
 There may be attempts to follow Gentoo conventions for ebuilds and stuff,
 but that's also not guaranteed.
