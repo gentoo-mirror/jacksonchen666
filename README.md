@@ -33,7 +33,8 @@ found.
 Not guaranteed. Insert all the disclaimers here of course.
 
 jacksonchen666's main Gentoo machine runs on x86_64/amd64, so packages will
-be less tested for arm64.
+be less tested for arm64. Outside of that, there is no testing for
+architectures in x86_64/amd64 or arm64.
 
 There may be attempts to follow Gentoo conventions for ebuilds and stuff,
 but that's also not guaranteed.
@@ -86,6 +87,23 @@ jacksonchen666 uses their Gentoo system with the systemd init system instead
 of the OpenRC init system. OpenRC will be sparsely tested.
 
 See also the ["Quality" section](#quality)
+
+### Uptime and Availability
+
+About 50% of the ebuilds in this overlay (including different versions for
+the same atom/name) uses <https://files.jacksonchen666.com/gentoo/> to fetch
+more sources in addition to upstream source code. This means the ability to
+download sources and compile packages depends on the self-hosted server of
+jacksonchen666.com, with its status being available at
+<https://status.jacksonchen666.com>.
+
+Another dependency of "has to be online to work" is git.sr.ht for grabbing
+the ebuilds (although local copies are stored on your system). No mirrors
+currently exist.
+
+Of course, there's also the source files themselves from anywhere, including
+code forges, mostly GitHub. There is also no mirroring of that, since this
+repository isn't the official Gentoo repository.
 
 ## License
 
