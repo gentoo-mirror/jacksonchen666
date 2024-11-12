@@ -88,7 +88,7 @@ of the OpenRC init system. OpenRC will be sparsely tested.
 
 See also the ["Quality" section](#quality)
 
-### Uptime and Availability
+### Uptime, Availability, and Mirroring (or: sources)
 
 About 50% of the ebuilds in this overlay (including different versions for
 the same atom/name) uses <https://files.jacksonchen666.com/gentoo/> to fetch
@@ -98,8 +98,8 @@ jacksonchen666.com, with its status being available at
 <https://status.jacksonchen666.com>.
 
 Another dependency of "has to be online to work" is git.sr.ht for grabbing
-the ebuilds (although local copies are stored on your system). No mirrors
-currently exist.
+the ebuilds (although local copies are stored on your system). No mirrors of
+any kind currently exist.
 
 Of course, there's also the source files themselves from anywhere, including
 code forges, mostly GitHub. There is also no mirroring of that, since this
