@@ -97,4 +97,4 @@ LICENSE+="
 "
 
 SLOT="0"
-KEYWORDS="~arm64"
+KEYWORDS="~amd64 ~arm64"
