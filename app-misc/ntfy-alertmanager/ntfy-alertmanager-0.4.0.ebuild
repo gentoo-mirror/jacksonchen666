@@ -8,9 +8,16 @@ inherit go-module systemd
 
 DESCRIPTION="A bridge between ntfy and Alertmanager"
 HOMEPAGE="https://hub.xenrox.net/~xenrox/ntfy-alertmanager/"
-SRC_URI="https://git.xenrox.net/~xenrox/ntfy-alertmanager/refs/download/v${PV}/${P}.tar.gz"
-# https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Vendor_tarball
-SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
+if [[ "${PV}" == "9999" ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://git.xenrox.net/~xenrox/ntfy-alertmanager"
+	RESTRICT="network-sandbox"
+else
+	SRC_URI="https://git.xenrox.net/~xenrox/ntfy-alertmanager/refs/download/v${PV}/${P}.tar.gz"
+	# https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Vendor_tarball
+	SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
+	KEYWORDS="~amd64 ~arm64"
+fi
 
 LICENSE="AGPL-3"
 # third party deps
@@ -18,9 +25,8 @@ LICENSE="AGPL-3"
 # (https://wiki.gentoo.org/wiki/Writing_go_Ebuilds#Licenses)
 LICENSE+=" MIT BSD BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
 # disabled due to lack of mirrors
-RESTRICT="mirror"
+RESTRICT+=" mirror"
 
 DEPEND="
 	acct-group/ntfy-alertmanager
