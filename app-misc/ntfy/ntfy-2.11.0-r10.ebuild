@@ -33,6 +33,7 @@ SRC_URI+="
 	)
 "
 
+# TODO: GPL-2 or later?
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
 #

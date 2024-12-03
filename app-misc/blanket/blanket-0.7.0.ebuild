@@ -20,7 +20,7 @@ DESCRIPTION="Listen to ambient sounds"
 HOMEPAGE="https://apps.gnome.org/Blanket/"
 SRC_URI="https://github.com/rafaelmardojai/blanket/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 # sounds licensing
 LICENSE+=" CC0-1.0 CC-BY-4.0 CC-BY-3.0 CC-BY-SA-4.0 public-domain"
 SLOT="0"
