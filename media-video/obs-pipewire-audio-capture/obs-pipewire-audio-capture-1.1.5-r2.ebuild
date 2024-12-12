@@ -8,7 +8,7 @@ HOMEPAGE="https://obsproject.com/forum/resources/pipewire-audio-capture.1458/"
 SRC_URI="https://github.com/dimtpap/obs-pipewire-audio-capture/archive/${PV}.tar.gz -> ${P}.tar.gz"
 inherit cmake
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 

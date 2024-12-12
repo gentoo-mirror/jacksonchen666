@@ -19,6 +19,7 @@ else
 	KEYWORDS="~amd64 ~arm64"
 fi
 
+# TODO: AGPL-3 or later?
 LICENSE="AGPL-3"
 # third party deps
 # checked on ntfy-alertmanager 0.3.0

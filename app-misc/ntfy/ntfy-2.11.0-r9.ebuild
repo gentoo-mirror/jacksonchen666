@@ -16,6 +16,7 @@ SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-vendor.tar.xz"
 #SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-node_modules.tar.xz"
 SRC_URI+=" https://files.jacksonchen666.com/gentoo/${P}-node_modules.tar.xz"
 
+# TODO: GPL-2 or later?
 LICENSE="|| ( Apache-2.0 GPL-2 )"
 # third party deps
 #
