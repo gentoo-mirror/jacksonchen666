@@ -9,6 +9,7 @@ app-misc/desec-dns 1.1.0-r1: A simple deSEC.io API client
 app-misc/ijq 1.1.2: Interactive jq tool.
 app-misc/ntfy 2.11.0-r9 2.11.0-r10: Simple pub-sub notification service
 app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 9999: A bridge between ntfy and Alertmanager
+games-strategy/endless-sky 0.10.10: Space exploration, trading & combat in the tradition of Terminal Velocity
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
 media-video/obs-pipewire-audio-capture 1.1.5-r2: PipeWire audio capturing for OBS Studio
 net-analyzer/librespeed-cli 1.0.11_p20240911: Command line interface for LibreSpeed speed test backends
