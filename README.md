@@ -5,22 +5,29 @@ either. I'm not sure.
 
 Contains stuff I want as packages on a Gentoo Linux system.
 
-Bug reports outside of Gentoo's Bugzilla and all patches are currently being
-redirected to `/dev/null` as the infrastructure currently doesn't exist yet.
+All patches are currently being redirected to `/dev/null` as it's been
+undecided what to do.
 
 <!-- update resources for development on contributions for this repo as well -->
 
 ## Bug reporting
 
-You can [make a bug report on the Gentoo Bugzilla][gbugzilla] (requires
-account). The "Product" should be "Gentoo Linux" and the "Component" should
-be "Overlay", which are ensured with the link. Attachments can be added
-after submitting your bug report.
+You can either create a [todo ticket on todo.sr.ht][todosrht] (requires
+email at minimum) or an issue [on Codeberg][cbissues] (requires email and
+account).
 
-The summary should include "jacksonchen666" somewhere, like in a package
-atom as `::jacksonchen666`, or there should be something like
-`[jacksonchen666]` prefixed, so bugs regarding this overlay can be easily
-found.
+[todosrht]:https://todo.sr.ht/~jacksonchen666/gentoo-overlay
+[cbissues]:https://codeberg.org/jacksonchen666/gentoo-overlay/issues
+
+You can [make a bug report on the Gentoo Bugzilla][gbugzilla] (requires
+email and account). The "Product" should be "Gentoo Linux" and the
+"Component" should be "Overlay", which are ensured with the link.
+Attachments can be added after submitting your bug report.
+
+For Gentoo Bugzilla: The summary should include "jacksonchen666" somewhere,
+like in a package atom as `::jacksonchen666`, or there should be something
+like `[jacksonchen666]` prefixed, so bugs regarding this overlay can be
+easily found.
 
 [gbugzilla]:https://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux&component=Overlays&format=guided
 
@@ -113,8 +120,7 @@ downloads or compiles or installs.
 ## Resources for development
 
 If you want to make your own ebuild repository (or contribute to this one,
-if contributions are open (it is not)), here's some helpful
-resources:
+if contributions are open (it is not)), here's some helpful resources:
 - [Basic guide to write Gentoo Ebuilds](https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds) (especially the "See also" section)
 - [Creating an ebuild repository](https://wiki.gentoo.org/wiki/Eselect/Repository#Create_a_new_ebuild_repository)
 - <https://devmanual.gentoo.org/>
