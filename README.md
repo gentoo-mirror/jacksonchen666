@@ -120,8 +120,7 @@ downloads or compiles or installs.
 ## Resources for development
 
 If you want to make your own ebuild repository (or contribute to this one,
-if contributions are open (it is not)), here's some helpful
-resources:
+if contributions are open (it is not)), here's some helpful resources:
 - [Basic guide to write Gentoo Ebuilds](https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds) (especially the "See also" section)
 - [Creating an ebuild repository](https://wiki.gentoo.org/wiki/Eselect/Repository#Create_a_new_ebuild_repository)
 - <https://devmanual.gentoo.org/>
