@@ -4,7 +4,6 @@ acct-user/ntfy 0-r1: User for ntfy
 acct-user/ntfy-alertmanager 0: User for ntfy-alertmanager
 app-backup/bupstash 0.12.0: Easy and efficient encrypted backups.
 app-misc/b3sum 1.5.4: a command line implementation of the BLAKE3 hash function
-app-misc/blanket 0.7.0: Listen to ambient sounds
 app-misc/desec-dns 1.1.0-r1: A simple deSEC.io API client
 app-misc/ijq 1.1.2: Interactive jq tool.
 app-misc/ntfy 2.11.0-r9 2.11.0-r10: Simple pub-sub notification service
@@ -12,6 +11,7 @@ app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 9999: A bridge between ntfy and Alertm
 dev-vcs/git-autofixup 0.004007: Create fixup commits for topic branches
 games-strategy/endless-sky 0.10.10: Space exploration, trading & combat in the tradition of Terminal Velocity
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
+media-sound/blanket 0.7.0: Listen to ambient sounds
 media-video/obs-pipewire-audio-capture 1.1.5-r2: PipeWire audio capturing for OBS Studio
 net-analyzer/librespeed-cli 1.0.11_p20240911: Command line interface for LibreSpeed speed test backends
 www-servers/darkhttpd 1.16: When you need a web server in a hurry
