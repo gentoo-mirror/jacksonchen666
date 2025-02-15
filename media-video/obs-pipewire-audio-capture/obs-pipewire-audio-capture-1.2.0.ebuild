@@ -19,7 +19,5 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
-# no tests
-RESTRICT="test"
 # disabled due to lack of mirrors
 RESTRICT+=" mirror"
