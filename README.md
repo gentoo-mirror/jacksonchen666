@@ -39,15 +39,13 @@ easily found.
 
 Not guaranteed. Insert all the disclaimers here of course.
 
-jacksonchen666's main Gentoo machine runs on x86_64/amd64, so packages will
-be less tested for arm64. Outside of that, there is no testing for
-architectures in x86_64/amd64 or arm64.
+jacksonchen666's main Gentoo machine runs on x86_64/amd64, and packages will
+be less tested for arm64. Even then, the bare minimum checks is "does it
+compile", and nothing else for all other architectures. This is reflected in
+the keywording of ebuilds.
 
 There may be attempts to follow Gentoo conventions for ebuilds and stuff,
 but that's also not guaranteed.
-
-Packages will only have an unstable keyword if it has been vaguely tested on
-that architecture.
 
 <!-- Note to self: https://projects.gentoo.org/qa/policy-guide/ -->
 
