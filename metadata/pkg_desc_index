@@ -3,7 +3,7 @@ acct-group/ntfy-alertmanager 0: Group for ntfy-alertmanager
 acct-user/ntfy 0-r1: User for ntfy
 acct-user/ntfy-alertmanager 0: User for ntfy-alertmanager
 app-backup/bupstash 0.12.0: Easy and efficient encrypted backups.
-app-misc/b3sum 1.6.1: Command line implementation of the BLAKE3 hash function
+app-misc/b3sum 1.7.0: Command line implementation of the BLAKE3 hash function
 app-misc/desec-dns 1.1.0-r1 1.2.0: A simple deSEC.io API client
 app-misc/ijq 1.1.2: Interactive jq tool.
 app-misc/ntfy 2.11.0-r9 2.11.0-r10: Simple pub-sub notification service
