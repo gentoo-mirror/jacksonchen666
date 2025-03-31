@@ -15,10 +15,10 @@ CRATES="
 	arrayref@0.3.9
 	arrayvec@0.7.6
 	bitflags@2.9.0
-	cc@1.2.16
+	cc@1.2.17
 	cfg-if@1.0.0
-	clap@4.5.32
-	clap_builder@4.5.32
+	clap@4.5.34
+	clap_builder@4.5.34
 	clap_derive@4.5.32
 	clap_lex@0.7.4
 	colorchoice@1.0.3
@@ -37,7 +37,7 @@ CRATES="
 	libc@0.2.171
 	linux-raw-sys@0.9.3
 	memmap2@0.9.5
-	once_cell@1.21.1
+	once_cell@1.21.3
 	os_pipe@1.2.1
 	proc-macro2@1.0.94
 	quote@1.0.40
@@ -48,7 +48,7 @@ CRATES="
 	shlex@1.3.0
 	strsim@0.11.1
 	syn@2.0.100
-	tempfile@3.19.0
+	tempfile@3.19.1
 	terminal_size@0.4.2
 	unicode-ident@1.0.18
 	utf8parse@0.2.2
