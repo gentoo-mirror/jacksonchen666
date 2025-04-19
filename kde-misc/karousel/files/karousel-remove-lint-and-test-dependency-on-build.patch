@@ -1,0 +1,28 @@
+From af3ac7d57f604f542295ca1ee35bc58accf42a9a Mon Sep 17 00:00:00 2001
+From: Jackson <jackson@jacksonchen666.com>
+Date: Sun, 20 Apr 2025 01:07:16 +0200
+Subject: [PATCH] remove lint and tests dependency in build step
+
+this is to remove the unnecessary lint that also calls for npm install. also
+lumping in tests for control over tests.
+---
+
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index a42579c..a663aa4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,7 +3,7 @@ CHECKS := true
+ 
+ .PHONY: *
+ 
+-build: lint tests
++build:
+ 	tsc -p ./src/main --outFile ./package/contents/code/main.js
+ 	mkdir -p ./package/contents/config
+ 	./run-ts.sh ./src/generators/config > ./package/contents/config/main.xml
+-- 
+2.49.0
+
