@@ -1,5 +1,5 @@
 BDEPEND=dev-lang/typescript net-libs/nodejs >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install test unpack
+DEFINED_PHASES=compile install prepare test unpack
 DEPEND=dev-qt/qtdeclarative kde-plasma/kwin kde-frameworks/knotifications
 DESCRIPTION=Scrollable tiling Kwin script
 EAPI=8
@@ -12,4 +12,4 @@ RDEPEND=dev-qt/qtdeclarative kde-plasma/kwin kde-frameworks/knotifications
 RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=ab07a76e7153a6bd1021966b9d168a87
+_md5_=d2f9f0c1d2fb2d32b5c13c4a5792925f

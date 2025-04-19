@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtdeclarative kde-plasma/kwin kde-frameworks/knotifications
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/peterfajdiga/karousel/archive/tags/v0.12.tar.gz -> karousel-0.12.tar.gz
-_md5_=4c279a4e50fdcb4a62d33b677981f9ac
+SRC_URI=https://github.com/peterfajdiga/karousel/archive/refs/tags/v0.12.tar.gz -> karousel-0.12.tar.gz
+_md5_=62cda826e4e8ce2f07b1af74e98fe1de
