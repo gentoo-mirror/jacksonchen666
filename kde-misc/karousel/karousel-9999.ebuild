@@ -9,7 +9,7 @@ if [[ "${PV}" == *"9999"* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/peterfajdiga/karousel.git"
 else
-	SRC_URI="https://github.com/peterfajdiga/karousel/archive/tags/v${PV}.tar.gz -> ${PF}.tar.gz"
+	SRC_URI="https://github.com/peterfajdiga/karousel/archive/refs/tags/v${PV}.tar.gz -> ${PF}.tar.gz"
 fi
 
 # +?
