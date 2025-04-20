@@ -1,7 +1,0 @@
-# Jackson <gentoo@jacksonchen666.com> (2025-02-23)
-# Removal after 30 days due to unused ebuild
-app-backup/bupstash
-
-# Jackson <gentoo@jacksonchen666.com> (2025-02-23)
-# Removal after 30 days to delegate to upstream ebuilds
-games-strategy/endless-sky
