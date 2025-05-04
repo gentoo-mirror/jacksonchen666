@@ -7,10 +7,13 @@ DESCRIPTION="Scrollable tiling Kwin script"
 HOMEPAGE="https://github.com/peterfajdiga/karousel"
 if [[ "${PV}" == *"9999"* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/peterfajdiga/karousel"
+	EGIT_REPO_URI="https://github.com/peterfajdiga/karousel.git"
 else
 	SRC_URI="https://github.com/peterfajdiga/karousel/archive/refs/tags/v${PV}.tar.gz -> ${PF}.tar.gz"
 fi
+NONFATAL_PATCHES=(
+	"${FILESDIR}"/${PN}-remove-lint-and-test-dependency-on-build.patch
+)
 
 # +?
 LICENSE="GPL-3"
@@ -37,12 +40,21 @@ BDEPEND="
 IUSE="test"
 RESTRICT="!test? ( test )"
 
+src_prepare() {
+	# no clue what version we might be on, so just gracefully fail if it
+	# can't be applied, no big deal.
+	nonfatal eapply "${NONFATAL_PATCHES[@]}"
+	default
+}
+
 src_compile() {
-	emake TESTS=false build
+	# upstream changed the variables names, and included npm install with
+	# lint checks (included in build)
+	emake TESTS=false CHECKS=false build
 }
 
 src_test() {
-	emake tests
+	emake CHECKS=true tests
 }
 
 src_install() {
