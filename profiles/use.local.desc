@@ -3,3 +3,4 @@
 # * generated automatically using pmaint *
 
 app-misc/ntfy:server - Build server-side code (including web interface)
+games-arcade/osu-lazer-bin:force-wayland - Tell the game to use Wayland instead of X
