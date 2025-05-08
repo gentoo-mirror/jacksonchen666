@@ -7,7 +7,7 @@ EAPI=8
 # maybe src_compile accordingly
 
 DESCRIPTION="Interactive jq tool."
-HOMEPAGE="https://sr.ht/~gpanders/ijq/"
+HOMEPAGE="https://codeberg.org/gpanders/ijq"
 # TODO: 9999
 SRC_URI="
 	https://git.sr.ht/~gpanders/ijq/archive/v${PV}.tar.gz -> ${P}.tar.gz
