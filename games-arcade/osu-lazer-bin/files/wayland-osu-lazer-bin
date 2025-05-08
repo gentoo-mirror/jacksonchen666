@@ -1,0 +1,8 @@
+#!/bin/sh
+OSU_EXTERNAL_UPDATE_PROVIDER='1'
+export OSU_EXTERNAL_UPDATE_PROVIDER
+
+SDL_VIDEODRIVER='wayland'
+export SDL_VIDEODRIVER
+
+exec "/opt/%P%/osu!" "${@}"
