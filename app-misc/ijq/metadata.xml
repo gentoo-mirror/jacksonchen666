@@ -6,6 +6,6 @@
         <name>Jackson</name>
     </maintainer>
     <upstream>
-        <remote-id type="sourcehut">~gpanders/ijq</remote-id>
+        <remote-id type="codeberg">gpanders/ijq</remote-id>
     </upstream>
 </pkgmetadata>
