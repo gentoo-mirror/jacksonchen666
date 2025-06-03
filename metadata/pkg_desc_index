@@ -5,7 +5,7 @@ acct-user/ntfy-alertmanager 0: User for ntfy-alertmanager
 app-misc/b3sum 1.8.2: Command line implementation of the BLAKE3 hash function
 app-misc/desec-dns 1.1.0-r1 1.2.0: A simple deSEC.io API client
 app-misc/ijq 1.1.2 1.1.2-r1: Interactive jq tool
-app-misc/ntfy 2.11.0-r10: Simple pub-sub notification service
+app-misc/ntfy 2.11.0-r10 2.12.0: Simple pub-sub notification service
 app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 9999: A bridge between ntfy and Alertmanager
 dev-vcs/git-autofixup 0.004007: Create fixup commits for topic branches
 games-arcade/osu-lazer-bin 2025.424.0: A free-to-win rhythm game (Upstream binary builds)
