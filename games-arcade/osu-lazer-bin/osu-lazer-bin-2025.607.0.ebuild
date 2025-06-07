@@ -13,7 +13,8 @@ SRC_URI="https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage
 		-> ${P}.AppImage"
 
 # "all-rights-reserved" - ships a copy of proprietary BASS lib - https://www.un4seen.com
-LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved"
+# CC BY-NC 4.0 - https://github.com/ppy/osu-resources?tab=License-1-ov-file
+LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved CC-BY-NC-4.0"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="force-wayland"
