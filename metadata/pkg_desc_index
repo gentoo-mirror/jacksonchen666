@@ -8,7 +8,7 @@ app-misc/ijq 1.1.2 1.1.2-r1: Interactive jq tool
 app-misc/ntfy 2.11.0-r10 2.12.0: Simple pub-sub notification service
 app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 9999: A bridge between ntfy and Alertmanager
 dev-vcs/git-autofixup 0.004007: Create fixup commits for topic branches
-games-arcade/osu-lazer-bin 2025.607.0: A free-to-win rhythm game (Upstream binary builds)
+games-arcade/osu-lazer-bin 2025.607.0-r1 2025.607.1: A free-to-win rhythm game (Upstream binary builds)
 kde-misc/karousel 0.13 9999: Scrollable tiling Kwin script
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
 media-sound/blanket 0.7.0: Listen to ambient sounds
