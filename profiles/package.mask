@@ -1,0 +1,2 @@
+# Part of Tachyon (unstable) release stream
+=games-arcade/osu-lazer-bin-2025.607.1
