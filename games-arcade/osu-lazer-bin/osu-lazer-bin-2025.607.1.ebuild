@@ -22,6 +22,11 @@ LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved"
 # https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Torus/LICENCE           - commercial license for distribution
 # https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Venera/LICENCE          - commercial license for distribution
 LICENSE+=" CC-BY-NC-4.0 OFL-1.1 Apache-2.0 all-rights-reserved"
+
+SLOT="0"
+KEYWORDS="-* ~amd64"
+IUSE="force-wayland"
+
 # because redistribution is not allowed without a commercial license, binary
 # packages should not exist either
 RESTRICT="bindist"
@@ -29,11 +34,8 @@ RESTRICT="bindist"
 RESTRICT+=" binchecks"
 # let's also not touch the binaries
 RESTRICT+=" strip"
-
-SLOT="0"
-KEYWORDS="-* ~amd64"
-IUSE="force-wayland"
-RESTRICT+=" test" # not source code-based ebuild
+# not source code-based ebuild
+RESTRICT+=" test"
 
 # TODO: mimetype icons
 
@@ -51,10 +53,6 @@ unsupported_warning() {
 }
 
 pkg_pretend() {
-	unsupported_warning
-}
-
-pkg_postinst() {
 	unsupported_warning
 }
 
@@ -103,6 +101,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	unsupported_warning
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
