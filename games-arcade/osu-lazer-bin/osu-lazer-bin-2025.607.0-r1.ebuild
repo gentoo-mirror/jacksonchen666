@@ -13,22 +13,47 @@ SRC_URI="https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage
 		-> ${P}.AppImage"
 
 # "all-rights-reserved" - ships a copy of proprietary BASS lib - https://www.un4seen.com
-# CC BY-NC 4.0 - https://github.com/ppy/osu-resources?tab=License-1-ov-file
-LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved CC-BY-NC-4.0"
+LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved"
+# https://github.com/ppy/osu-resources
+# CC BY-NC 4.0 + fonts
+# https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Inter/OFL.txt
+# https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Noto/LICENSE.txt - Apache 2.0
+# https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Torus-Alternate/LICENCE - commercial license for distribution
+# https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Torus/LICENCE           - commercial license for distribution
+# https://github.com/ppy/osu-resources/blob/master/osu.Game.Resources/Fonts/Venera/LICENCE          - commercial license for distribution
+LICENSE+=" CC-BY-NC-4.0 OFL-1.1 Apache-2.0 all-rights-reserved"
+
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="force-wayland"
-RESTRICT="test" # not source code-based ebuild
+
+# because redistribution is not allowed without a commercial license, binary
+# packages should not exist either
+RESTRICT="bindist"
+# also it's an upstream binary we don't have control over, so don't bother
+RESTRICT+=" binchecks"
+# let's also not touch the binaries
+RESTRICT+=" strip"
+# not source code-based ebuild
+RESTRICT+=" test"
 
 # TODO: mimetype icons
 
+unsupported_warning() {
+	ewarn  "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
+	ewarn  "using osu!lazer (installed from this ebuild), please check if you can reproduce"
+	ewarn  "a bug using developer provided AppImages first before asking/reporting to them."
+	ewarn  ""
+	ewarn  "If you're sure or unsure whether an issue is caused by this ebuild, please"
+	ewarn  "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
+	# for tachyon release streams only, uncomment manually
+	#ewarn  ""
+	#eerror "A Tachyon release is being installed. This can potentially be unstable."
+	#eerror "To avoid unstable Tachyon releases, remove any unmasks for osu-lazer-bin."
+}
+
 pkg_pretend() {
-	ewarn "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
-	ewarn "using osu!lazer (installed from this ebuild), please check if you can reproduce"
-	ewarn "a bug using developer provided AppImages first before asking/reporting to them."
-	ewarn ""
-	ewarn "If you're sure or unsure whether an issue is caused by this ebuild, please"
-	ewarn "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
+	unsupported_warning
 }
 
 src_unpack() {
@@ -76,6 +101,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	unsupported_warning
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
