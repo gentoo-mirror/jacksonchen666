@@ -22,13 +22,25 @@ RESTRICT="test" # not source code-based ebuild
 
 # TODO: mimetype icons
 
+unsupported_warning() {
+	ewarn  "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
+	ewarn  "using osu!lazer (installed from this ebuild), please check if you can reproduce"
+	ewarn  "a bug using developer provided AppImages first before asking/reporting to them."
+	ewarn  ""
+	ewarn  "If you're sure or unsure whether an issue is caused by this ebuild, please"
+	ewarn  "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
+	# for tachyon release streams only, uncomment manually
+	#ewarn  ""
+	#eerror "A Tachyon release is being installed. This can potentially be unstable."
+	#eerror "To avoid unstable Tachyon releases, remove any unmasks for osu-lazer-bin."
+}
+
 pkg_pretend() {
-	ewarn "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
-	ewarn "using osu!lazer (installed from this ebuild), please check if you can reproduce"
-	ewarn "a bug using developer provided AppImages first before asking/reporting to them."
-	ewarn ""
-	ewarn "If you're sure or unsure whether an issue is caused by this ebuild, please"
-	ewarn "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
+	unsupported_warning
+}
+
+pkg_postinst() {
+	unsupported_warning
 }
 
 src_unpack() {
