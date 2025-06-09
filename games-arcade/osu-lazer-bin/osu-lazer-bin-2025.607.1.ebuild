@@ -52,7 +52,7 @@ unsupported_warning() {
 	eerror "To avoid unstable Tachyon releases, remove any unmasks for osu-lazer-bin."
 	elog   ""
 	elog   "If Tachyon unstable releases are desired, the release stream should be updated"
-	elog   "within osu!lazer anyways."
+	elog   "within osu!lazer anyways (to receive update notifications)."
 }
 
 pkg_pretend() {
