@@ -9,8 +9,10 @@ DESCRIPTION="A free-to-win rhythm game (Upstream binary builds)"
 HOMEPAGE="https://osu.ppy.sh/
 	https://github.com/ppy/osu/"
 
-SRC_URI="https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage
-		-> ${P}.AppImage"
+SRC_URI="
+	https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage
+		-> ${P}.AppImage
+"
 
 # "all-rights-reserved" - ships a copy of proprietary BASS lib - https://www.un4seen.com
 LICENSE="Apache-2.0 BSD-2 LGPL-2.1 LGPL-3+ MIT all-rights-reserved"
@@ -26,6 +28,13 @@ LICENSE+=" CC-BY-NC-4.0 OFL-1.1 Apache-2.0 all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="force-wayland"
+
+# do not allow simultaneous installation of non-tachyon and tachyon
+# releases. while it's possible to have both, usage flow hasn't been thought
+# out, and constantly switching versions by accident (via desktop
+# environment search picking things differently sometimes) could cause
+# issues.
+RDEPEND="!games-arcade/osu-lazer-tachyon-bin"
 
 # because redistribution is not allowed without a commercial license, binary
 # packages should not exist either
@@ -52,6 +61,9 @@ unsupported_warning() {
 	#ewarn  ""
 	#eerror "A Tachyon release is being installed. This can potentially be unstable."
 	#eerror "To avoid unstable Tachyon releases, remove any unmasks for osu-lazer-bin."
+	#elog   ""
+	#elog   "If Tachyon unstable releases are desired, the release stream should be updated"
+	#elog   "within osu!lazer anyways (to receive update notifications)."
 }
 
 pkg_pretend() {
