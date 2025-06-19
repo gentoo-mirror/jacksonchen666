@@ -1,0 +1,5 @@
+#!/bin/sh
+OSU_EXTERNAL_UPDATE_PROVIDER='1'
+export OSU_EXTERNAL_UPDATE_PROVIDER
+
+exec "/opt/%P%/osu!" "${@}"
