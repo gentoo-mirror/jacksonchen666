@@ -36,6 +36,8 @@ RESTRICT+=" binchecks"
 RESTRICT+=" strip"
 # not source code-based ebuild
 RESTRICT+=" test"
+# non-redistributable things too, also no mirrors exist for this repo
+RESTRICT+=" mirror"
 
 # TODO: mimetype icons
 
