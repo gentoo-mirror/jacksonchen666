@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="project">
+    <email>jackson@jacksonchen666.com</email>
+    <name>Jackson</name>
+  </maintainer>
+  <use>
+    <flag name="force-wayland">Tell the game to use Wayland instead of X</flag>
+  </use>
+  <upstream>
+    <changelog>https://github.com/ppy/osu/releases/</changelog>
+    <remote-id type="github">ppy/osu</remote-id>
+  </upstream>
+</pkgmetadata>
