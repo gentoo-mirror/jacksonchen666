@@ -11,4 +11,4 @@ RESTRICT=bindist binchecks strip test mirror
 SLOT=0
 SRC_URI=https://github.com/ppy/osu/releases/download/2025.607.0/osu.AppImage -> osu-lazer-bin-2025.607.0.AppImage
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=d012ecabbdaed218662f48ea1985e009
+_md5_=5bab88927deeacbd1c8075b116aa49f6

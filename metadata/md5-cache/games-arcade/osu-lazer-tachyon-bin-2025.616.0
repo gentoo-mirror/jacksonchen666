@@ -11,4 +11,4 @@ RESTRICT=bindist binchecks strip test mirror
 SLOT=0
 SRC_URI=https://github.com/ppy/osu/releases/download/2025.616.0-tachyon/osu.AppImage -> osu-lazer-tachyon-bin-2025.616.0.AppImage
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=9af03bf63e27106b6f4e9b5633726a31
+_md5_=6925bb8d42035e44ca6e5b44406ce1c1
