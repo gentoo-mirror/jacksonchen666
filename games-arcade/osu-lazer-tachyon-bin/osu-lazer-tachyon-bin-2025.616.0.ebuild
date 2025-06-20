@@ -54,7 +54,7 @@ unsupported_warning() {
 	elog "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
 	elog "using osu!lazer (installed from this ebuild), please check if you can reproduce"
 	elog "a bug using developer provided AppImages first before asking/reporting to them."
-	elog "AppImages can be found at https://github.com/ppy/osu/releases/tag/latest."
+	elog "AppImages can be found at https://github.com/ppy/osu/releases/latest."
 	elog ""
 	elog "If you're sure or unsure whether an issue is caused by this ebuild, please"
 	elog "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
