@@ -51,19 +51,19 @@ RESTRICT+=" mirror"
 # TODO: mimetype icons
 
 unsupported_warning() {
-	ewarn  "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
-	ewarn  "using osu!lazer (installed from this ebuild), please check if you can reproduce"
-	ewarn  "a bug using developer provided AppImages first before asking/reporting to them."
-	ewarn  ""
-	ewarn  "If you're sure or unsure whether an issue is caused by this ebuild, please"
-	ewarn  "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
+	elog "This ebuild is unsupported by osu!lazer developers. If you encounter issues"
+	elog "using osu!lazer (installed from this ebuild), please check if you can reproduce"
+	elog "a bug using developer provided AppImages first before asking/reporting to them."
+	elog "AppImages can be found at https://github.com/ppy/osu/releases/tag/latest."
+	elog ""
+	elog "If you're sure or unsure whether an issue is caused by this ebuild, please"
+	elog "report it to https://todo.sr.ht/~jacksonchen666/gentoo-overlay."
 	# for tachyon release streams only, uncomment manually
-	#ewarn  ""
-	#eerror "A Tachyon release is being installed. This can potentially be unstable."
-	#eerror "To avoid unstable Tachyon releases, remove any unmasks for osu-lazer-bin."
-	#elog   ""
-	#elog   "If Tachyon unstable releases are desired, the release stream should be updated"
-	#elog   "within osu!lazer anyways (to receive update notifications)."
+	#elog ""
+	#elog "A Tachyon release is being installed. This can potentially be unstable."
+	#elog ""
+	#elog "If Tachyon unstable releases are desired, the release stream should be updated"
+	#elog "within osu!lazer anyways (to receive update notifications)."
 }
 
 pkg_pretend() {
