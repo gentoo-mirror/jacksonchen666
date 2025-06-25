@@ -98,8 +98,8 @@ RESTRICT+=" network-sandbox"
 
 pkg_pretend() {
 	if use server && ! use doc; then
-		ewarn "server USE flag is enabled but doc USE flag isn't, documentation linked on"
-		ewarn "the web UI will not be available!"
+		elog "server USE flag is enabled but doc USE flag isn't, documentation linked on"
+		elog "the web UI will not be available!"
 	fi
 }
 
