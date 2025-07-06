@@ -3,10 +3,10 @@ acct-group/ntfy-alertmanager 0: Group for ntfy-alertmanager
 acct-user/ntfy 0-r1: User for ntfy
 acct-user/ntfy-alertmanager 0: User for ntfy-alertmanager
 app-misc/b3sum 1.8.2: Command line implementation of the BLAKE3 hash function
-app-misc/desec-dns 1.1.0-r1 1.2.0: A simple deSEC.io API client
+app-misc/desec-dns 1.3.0: A simple deSEC.io API client
 app-misc/ijq 1.1.2 1.1.2-r1: Interactive jq tool
 app-misc/ntfy 2.11.0-r10 2.12.0: Simple pub-sub notification service
-app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 9999: A bridge between ntfy and Alertmanager
+app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 0.5.0 9999: A bridge between ntfy and Alertmanager
 dev-vcs/git-autofixup 0.004007: Create fixup commits for topic branches
 games-arcade/osu-lazer-bin 2025.607.0-r1: A free-to-win rhythm game (Upstream binary builds)
 games-arcade/osu-lazer-tachyon-bin 2025.616.0: A free-to-win rhythm game (Upstream binary builds, unstable version)
@@ -14,5 +14,5 @@ kde-misc/karousel 0.13 9999: Scrollable tiling Kwin script
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
 media-sound/blanket 0.7.0: Listen to ambient sounds
 media-video/obs-pipewire-audio-capture 1.2.0: PipeWire audio capturing for OBS Studio
-net-analyzer/librespeed-cli 1.0.11_p20240911: Command line interface for LibreSpeed speed test backends
+net-analyzer/librespeed-cli 1.0.11_p20240911 1.0.12: Command line interface for LibreSpeed speed test backends
 www-servers/darkhttpd 1.16: When you need a web server in a hurry
