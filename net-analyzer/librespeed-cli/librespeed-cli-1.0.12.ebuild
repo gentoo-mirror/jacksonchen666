@@ -18,7 +18,7 @@ LICENSE="LGPL-3"
 # deps license checked as of 7573b65ebc89a4cf463334dbdfab5b3edc706149
 LICENSE+=" Apache-2.0 MIT BSD BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 #DEPEND=""
 RDEPEND="${DEPEND}"
