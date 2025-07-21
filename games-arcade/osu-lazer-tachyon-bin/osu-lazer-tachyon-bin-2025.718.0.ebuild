@@ -61,9 +61,6 @@ unsupported_warning() {
 	# for tachyon release streams only, uncomment manually
 	elog ""
 	elog "A Tachyon release is being installed. This can potentially be unstable."
-	elog ""
-	elog "If Tachyon unstable releases are desired, the release stream should be updated"
-	elog "within osu!lazer anyways (to receive update notifications)."
 }
 
 pkg_pretend() {

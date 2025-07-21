@@ -10,7 +10,7 @@ HOMEPAGE="https://osu.ppy.sh/
 	https://github.com/ppy/osu/"
 
 SRC_URI="
-	https://github.com/ppy/osu/releases/download/${PV}/osu.AppImage
+	https://github.com/ppy/osu/releases/download/${PV}-lazer/osu.AppImage
 		-> ${P}.AppImage
 "
 
