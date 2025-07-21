@@ -1,2 +1,3 @@
-# Part of Tachyon (unstable) release stream
-=games-arcade/osu-lazer-bin-2025.607.1
+# Contains database changes incompatible with the lazer release stream
+# Jackson <jackson@jacksonchen666.com> 2025-07-21
+=games-arcade/osu-lazer-tachyon-bin-2025.721.0
