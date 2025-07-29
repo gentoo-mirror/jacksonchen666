@@ -1,5 +1,6 @@
 # Contains database changes incompatible with the lazer release stream
 # https://osu.ppy.sh/comments/3703311
-# Jackson <jackson@jacksonchen666.com> 2025-07-21, 2025-07-24
+# Jackson <jackson@jacksonchen666.com> 2025-07-21, 2025-07-24, 2025-07-29
 =games-arcade/osu-lazer-tachyon-bin-2025.721.0
 =games-arcade/osu-lazer-tachyon-bin-2025.724.2
+=games-arcade/osu-lazer-tachyon-bin-2025.729.0
