@@ -12,7 +12,7 @@ games-arcade/osu-lazer-bin 2025.710.0: A free-to-win rhythm game (Upstream binar
 games-arcade/osu-lazer-tachyon-bin 2025.718.0 2025.721.0 2025.724.2 2025.729.0: A free-to-win rhythm game (Upstream binary builds, unstable version)
 kde-misc/karousel 0.13 9999: Scrollable tiling Kwin script
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
-media-sound/blanket 0.7.0: Listen to ambient sounds
+media-sound/blanket 0.8.0: Listen to ambient sounds
 media-video/obs-pipewire-audio-capture 1.2.0: PipeWire audio capturing for OBS Studio
 net-analyzer/librespeed-cli 1.0.11_p20240911 1.0.12: Command line interface for LibreSpeed speed test backends
 www-servers/darkhttpd 1.17: When you need a web server in a hurry
