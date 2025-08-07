@@ -4,3 +4,6 @@
 =games-arcade/osu-lazer-tachyon-bin-2025.721.0
 =games-arcade/osu-lazer-tachyon-bin-2025.724.2
 =games-arcade/osu-lazer-tachyon-bin-2025.729.0
+=games-arcade/osu-lazer-tachyon-bin-2025.804.0
+=games-arcade/osu-lazer-tachyon-bin-2025.807.0
+=games-arcade/osu-lazer-tachyon-bin-2025.808.0
