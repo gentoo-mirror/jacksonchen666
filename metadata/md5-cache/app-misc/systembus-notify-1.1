@@ -1,0 +1,16 @@
+BDEPEND=test? ( dev-util/cppcheck sys-apps/dbus ) virtual/pkgconfig
+DEFINED_PHASES=install postinst
+DEPEND=sys-apps/systemd
+DESCRIPTION=Send desktop notifications from the system bus to the user bus
+EAPI=8
+HOMEPAGE=https://github.com/rfjakob/systembus-notify
+INHERIT=systemd
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sys-apps/systemd
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/rfjakob/systembus-notify/archive/refs/tags/v1.1.tar.gz -> systembus-notify-1.1.tar.gz
+_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	systemd	a964c0cbe818b5729da1dbfcee5be861
+_md5_=88054fb20b2a0a63346de30b0ce598bd
