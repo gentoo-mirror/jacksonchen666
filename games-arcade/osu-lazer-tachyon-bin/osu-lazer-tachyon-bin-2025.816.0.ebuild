@@ -9,8 +9,12 @@ DESCRIPTION="A free-to-win rhythm game (Upstream binary builds, unstable version
 HOMEPAGE="https://osu.ppy.sh/
 	https://github.com/ppy/osu/"
 
+#SRC_URI="
+#	https://github.com/ppy/osu/releases/download/${PV}-tachyon/osu.AppImage
+#		-> ${P}.AppImage
+#"
 SRC_URI="
-	https://github.com/ppy/osu/releases/download/${PV}-tachyon/osu.AppImage
+	https://github.com/ppy/osu/releases/download/${PV}-lazer/osu.AppImage
 		-> ${P}.AppImage
 "
 
