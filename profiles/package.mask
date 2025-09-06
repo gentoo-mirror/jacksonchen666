@@ -1,3 +1,9 @@
+# deprecated in favor of gentoo repository's ebuild
+# media-plugins/obs-pipewire-audio-capture::gentoo
+# removal in 30 days at earliest (2025-10-06)
+# Jackson <jackson@jacksonchen666.com 2025-09-06
+media-video/obs-pipewire-audio-capture
+
 # Contains database changes incompatible with the lazer release stream
 # TODO comment
 # Jackson <jackson@jacksonchen666.com>
