@@ -10,7 +10,7 @@ app-misc/ntfy-alertmanager 0.3.0-r1 0.4.0 0.5.0 9999: A bridge between ntfy and 
 app-misc/systembus-notify 1.1: Send desktop notifications from the system bus to the user bus
 dev-vcs/git-autofixup 0.004007: Create fixup commits for topic branches
 games-arcade/osu-lazer-bin 2025.816.0: A free-to-win rhythm game (Upstream binary builds)
-games-arcade/osu-lazer-tachyon-bin 2025.816.0 2025.822.0 2025.827.0 2025.829.0 2025.903.0 2025.905.0: A free-to-win rhythm game (Upstream binary builds, unstable version)
+games-arcade/osu-lazer-tachyon-bin 2025.816.0 2025.822.0 2025.827.0 2025.829.0 2025.903.0 2025.905.0 2025.910.0: A free-to-win rhythm game (Upstream binary builds, unstable version)
 kde-misc/karousel 0.13 9999: Scrollable tiling Kwin script
 media-fonts/inclusive-sans 0_p20230803 9999: A font designed for accessibility and readability
 media-sound/blanket 0.8.0: Listen to ambient sounds
