@@ -13,9 +13,11 @@ HOMEPAGE="https://osu.ppy.sh/
 #	https://github.com/ppy/osu/releases/download/${PV}-tachyon/osu.AppImage
 #		-> ${P}.AppImage
 #"
+
+# match filename with lazer ebuild to reduce duplication
 SRC_URI="
 	https://github.com/ppy/osu/releases/download/${PV}-lazer/osu.AppImage
-		-> ${P}.AppImage
+		-> osu-lazer-bin-${PV}.AppImage
 "
 
 # "all-rights-reserved" - ships a copy of proprietary BASS lib - https://www.un4seen.com
@@ -72,7 +74,11 @@ pkg_pretend() {
 }
 
 src_unpack() {
-	cp "${DISTDIR}/${P}.AppImage" "${WORKDIR}" || die "can't copy sources"
+	# has lazer distfile name compatibility (to reduce duplication)
+	cp "${DISTDIR}/${P}.AppImage" "${WORKDIR}" || \
+		cp "${DISTDIR}/osu-lazer-bin-${PV}.AppImage" "${WORKDIR}/${P}.AppImage" || \
+		die "can't copy sources"
+
 	chmod +x "${WORKDIR}/${P}.AppImage" || die "couldn't make appimage executable"
 	"${WORKDIR}/${P}.AppImage" --appimage-extract || die "couldn't extract appimage"
 	mv squashfs-root "${S}" || die "couldn't rename extracted"
