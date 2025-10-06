@@ -1,0 +1,14 @@
+BDEPEND=dev-lang/typescript net-libs/nodejs
+DEFINED_PHASES=compile install prepare test
+DEPEND=dev-qt/qtdeclarative kde-plasma/kwin kde-frameworks/knotifications
+DESCRIPTION=Scrollable tiling Kwin script
+EAPI=8
+HOMEPAGE=https://github.com/peterfajdiga/karousel
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtdeclarative kde-plasma/kwin kde-frameworks/knotifications
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/peterfajdiga/karousel/archive/refs/tags/v0.14.tar.gz -> karousel-0.14.tar.gz
+_md5_=36dc8cfc81437d10045f5d3f90d62674
