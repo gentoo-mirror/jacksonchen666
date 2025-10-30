@@ -6,7 +6,7 @@ EAPI=8
 inherit font
 
 DESCRIPTION="A font designed for accessibility and readability"
-HOMEPAGE="https://www.oliviaking.com/inclusive-sans"
+HOMEPAGE="https://www.oliviaking.com/inclusivesans/feature"
 
 if [[ "${PV}" == *"9999"* ]]; then
 	inherit git-r3
