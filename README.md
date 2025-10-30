@@ -103,8 +103,10 @@ jacksonchen666.com, with its status being available at
 <https://status.jacksonchen666.com>.
 
 Another dependency of "has to be online to work" is git.sr.ht for grabbing
-the ebuilds (although local copies are stored on your system). No mirrors of
-any kind currently exist.
+the ebuilds (although local copies are stored on your system). Currently,
+the following mirrors exist:
+- <https://codeberg.org/jacksonchen666/gentoo-overlay>
+- <https://git.jacksonchen666.com/jacksonchen666/gentoo-overlay>
 
 Of course, there's also the source files themselves from anywhere, including
 code forges, mostly GitHub. There is also no mirroring of that, since this
