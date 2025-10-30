@@ -37,9 +37,9 @@ RDEPEND="
 BDEPEND="
 	app-text/scdoc
 "
+S="${WORKDIR}/${PN}-v${PV}"
 # no mirrors anyways
 RESTRICT="mirror"
-S="${WORKDIR}/${PN}-v${PV}"
 
 src_compile() {
 	emake VERSION="${PVR}" ijq
